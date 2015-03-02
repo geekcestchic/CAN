@@ -8,9 +8,9 @@ function request(method, url, data){
 }
 
 function addToPage(project){
-  console.log(project)
+  // console.log(project)
   $('<li><h2><a href="/projects/'
-    +project.id +'">'+project.title+
+    + project.id +'">'+project.title+
     '</a></h2><p>'+project.content+'</p></li>')
   .prependTo("#projects")
 }
@@ -24,6 +24,6 @@ function getProjects(){
 }
 
 $(function(){
-  console.log('Javascript loaded')
+  console.log('Project.js loaded')
   getProjects()
 });

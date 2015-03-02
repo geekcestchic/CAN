@@ -1,3 +1,8 @@
 %h1= @project.title
 %p= @project.content
 
+/ -# if user_signed_in?
+%input#comment-box{ data: {project_id: @project.id } }
+%ul#comments
+/ -# else 
+/   %p You must be signed in to comment
