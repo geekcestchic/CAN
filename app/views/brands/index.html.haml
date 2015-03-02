@@ -1,0 +1,5 @@
+.brand
+  %h1 Brands Like Projects
+  - @brands.each do |brand|
+    %a{href: "#{brand_path(brand)}", class: 'brand'} #{brand.name} Collection
+        

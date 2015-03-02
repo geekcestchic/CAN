@@ -1,0 +1,22 @@
+.categories {
+  width: 75%;
+  margin: 0 auto;
+  text-align: center;
+  
+}
+
+.category { 
+    background-color: yellow;
+    width: 50%;
+    width: 200px;
+    height: 100px;
+    margin: 5px;
+    border: solid 1px;
+    display: inline-block;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+a {
+  line-height: 100px;
+}
