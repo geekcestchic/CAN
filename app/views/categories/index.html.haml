@@ -1,5 +1,7 @@
-.categories
+.header
   %h1 Project Categories
+
+.categories
   - @categories.each do |category|
     %a{href: "#{category_path(category)}", class: 'category'} #{category.name}
         
