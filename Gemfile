@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'simple_form'
 gem 'haml-rails'
 gem 'devise'
 gem 'rails_admin'

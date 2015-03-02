@@ -9,7 +9,7 @@ function request(method, url, data){
 
 function addToPage(project){
   // console.log(project)
-  $('<li><h2><a href="/projects/'
+  $('<li class="project"><h2><a href="/projects/'
     + project.id +'">'+project.title+
     '</a></h2><p>'+project.content+'</p></li>')
   .prependTo("#projects")
@@ -23,7 +23,10 @@ function getProjects(){
   });
 }
 
-$(function(){
+function ready(){
   console.log('Project.js loaded')
   getProjects()
-});
+}
+
+$(document).ready(ready)
+$(document).on('page:load', ready)

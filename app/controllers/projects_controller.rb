@@ -17,7 +17,14 @@ class ProjectsController < ApplicationController
 
   def create
     @project = Project.create project_params
-    render json: @project, status: :created
+    redirect_to projects_path
+  end
+
+  def similars
+    @project = Project.find(params[:id])
+    # redirect_to project_path(@project) if @project.update
+    # else render project_similar(@project)
+    # render json: @project, status: :created
   end
 
   def project_params
