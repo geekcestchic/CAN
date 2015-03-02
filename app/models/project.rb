@@ -7,6 +7,6 @@ class Project < ActiveRecord::Base
   # self association (to assign projects that are similar to each other), added a parent_project_id column in the projects table as well
   has_many :similars, :class_name => "Project",
     :foreign_key => "parent_project_id"
-  belongs_to :parent_post, :class_name => "Project",
+  belongs_to :parent_project, :class_name => "Project",
     :foreign_key => "parent_project_id"
 end
