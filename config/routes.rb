@@ -19,6 +19,7 @@ Rails.application.routes.draw do
     resources :comments
     resources :ratings
     resources :brands
+    resources :users
 
 
   # Example resource route with options:
