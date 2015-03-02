@@ -1,7 +1,22 @@
-%h1= @user.name
-= image_tag(@user.avater.show.url)
-%p= @user.location
+%h1
+  = @user.firstname 
+  = @user.lastname
+%h2
+  = @user.location
 %p= @user.bio
+
+= button_to 'Follow'
+
+%p
+  = pluralize(@user.followers.count, "follower")
+
+- @user.followers.each do |follower|
+  = link_to (follower.firstname), follower
+
+
+
+
+  
 
 
 
