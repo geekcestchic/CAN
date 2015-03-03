@@ -1,1 +1,86 @@
-%h1 Welcome to your app!
+
+%body
+  #header
+    
+  #container
+    #carousel
+      %ul
+        %li
+          %img{:alt => "Fish", :src => "/assets/fish.jpg"}/
+        %li
+          %img{:alt => "Elephant", :src => "/assets/elephant.jpg"}/
+        %li
+          %img{:alt => "Giraffe", :src => "/assets/giraffe.jpg"}/
+        %li
+          %img{:alt => "Penguins", :src => "/assets/penguins.jpg"}/
+    #main
+      .nav
+        %p Services
+        .jSlots-wrapper.slotHole
+          %ul.slot1
+            %li Twitter
+            %li Airbnb
+            %li Kickstarter
+            %li Instagram
+            %li Foursquare
+            %li Hailo
+            %li Pinterest
+        %input#form{:minlength => "2", :name => "form", :placeholder => "Add more!", :title => "List Form", :type => "text", :value => ""}
+      / div class nav ends here
+      .nav
+        %p Data Sources
+        .jSlots-wrapper.slotHole
+          %ul.slot2
+            %li Housing Data
+            %li Crime Data
+            %li Weather Data
+            %li Location Data
+            %li Party Data
+            %li Fitness Data
+            %li Shopping Data
+        %input#form{:minlength => "2", :name => "form", :placeholder => "Add more!", :title => "List Form", :type => "text", :value => ""}
+      / div class nav ends here
+      .nav
+        %p Technologies
+        .jSlots-wrapper.slotHole
+          %ul.slot3
+            %li Augmented Reality
+            %li RFID
+            %li Photo Recognition
+            %li 3D Printing
+            %li Holograms
+            %li NFC
+            %li Bio Sensors
+        %input#form{:minlength => "2", :name => "form", :placeholder => "Add more!", :title => "List Form", :type => "text", :value => ""}
+      / div class nav ends here
+      .nav
+        %p Revenue Models
+        .jSlots-wrapper.slotHole
+          %ul.slot4
+            %li Freemium
+            %li P2P Marketplace
+            %li Virtual Currency
+            %li Advertising
+            %li Subscription
+            %li Group Buying
+            %li Crowdfunding
+        %input#form{:minlength => "2", :name => "form", :placeholder => "Add more!", :title => "List Form", :type => "text", :value => ""}
+      / div class nav ends here
+      .nav
+        %p Human Needs
+        .jSlots-wrapper.slotHole
+          %ul.slot5
+            %li Health
+            %li Security
+            %li Belonging
+            %li Affection
+            %li Freedom
+            %li Creation
+            %li Participation
+        %input#form{:minlength => "2", :name => "form", :placeholder => "Add more!", :title => "List Form", :type => "text", :value => ""}
+      / div class nav end
+    #button
+      / this button will start the spin
+      %input#playBtn{:type => "button", :value => "play"}
+    / #button
+  / #container

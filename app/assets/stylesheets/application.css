@@ -73,3 +73,7 @@ header.sticky {
   padding-left: 20px;
   transition: all 0.2s ease;
 }
+
+.content_container {
+  padding-top: 190px;
+}

@@ -60,7 +60,6 @@ function unfillStars(){
 }
 
 function submitRating(){
-  
   var id = $(this).context.id;
   var projectId = $('#comment-box').data('project-id');
   var rating = $(this).context.dataset.rating;
@@ -78,7 +77,7 @@ function submitRating(){
 }
 
 function getAverage(){
-
+ 
 }
 
 $(document).ready(function(){

@@ -10,7 +10,7 @@
 .notify
 
 .average-rating
-  %p Average rating:
+  %p= "Average rating: #{@project.average_rating}"
 
 / - if user_signed_in?
 %input#comment-box{ data: {project_id: @project.id }, placeholder: "Comment on this project!", title: "Press Enter to Submit" }

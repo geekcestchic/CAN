@@ -15,5 +15,8 @@ class Project < ActiveRecord::Base
   def similar_projects
     self.projects.where.not(id: self.id)
   end
-
+  
+  def average_rating
+    ratings.inject(0.0){ |sum, el| sum + el.value }.to_f / ratings.size
+  end
 end
