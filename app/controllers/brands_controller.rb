@@ -5,7 +5,7 @@ class BrandsController < ApplicationController
   end
 
   def show
-    @Brand = Brand.find(params[:id])
+    @brand = Brand.find(params[:id])
   end
 
 end
