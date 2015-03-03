@@ -9,4 +9,14 @@
   %body
     %p.notice= notice
     %p.alert= alert
+    %header
+      %input{:placeholder => "Search", :type => "text"}
+        %ul
+          %li
+            %a{:href => ""} Ideas
+          %li
+            %a{:href => ""} Create An Idea
+          %li
+            %a{:href => ""} My Profile
+        %h1 Sticky Header
     = yield
