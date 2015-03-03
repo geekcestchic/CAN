@@ -19,7 +19,11 @@ Rails.application.routes.draw do
     resources :comments
     resources :ratings
     resources :brands
-    resources :users
+    resources :users do
+      member do
+        get :following, :followers
+      end
+    end
 
 
   # Example resource route with options:
