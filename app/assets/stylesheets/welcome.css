@@ -1,9 +1,13 @@
-body { 
+.welcome-container{
+
+}
+
+/*body { 
   font-family: Arial, Verdana, sans-serif;
   line-height:1.4;
   text-align: center;
   padding:0;
-}
+}*/
 
 #carousel {
     width: 480px;
@@ -25,7 +29,7 @@ body {
   float:  left;
 }
 
-ul {
+/*ul {
   padding:0px;
   margin:0px;
 }
@@ -42,7 +46,7 @@ div#container {
 h6 {
   padding-top: 75px;
   color:#FCC542;
-}
+}*/
 
 
 
@@ -69,9 +73,9 @@ div.nav {
   float: left;
   position:relative;
   list-style:none;
-  font-weight: bold;
+ /* font-weight: bold;
   color: #FCC542;
-  text-shadow: 3px 3px #ff0000;
+  text-shadow: 3px 3px #ff0000;*/
 }
 
 
@@ -123,11 +127,11 @@ input#form {
 }
 
 p {
-  color: #FCC542;
-  font-size: 24px;
+/*  color: #FCC542;
+  font-size: 24px;*/
   list-style:none;
   margin:0;
-  font-weight: bold;
+  /*font-weight: bold;
   color: #FCC542;
-  text-shadow: 3px 3px #ff0000;
+  text-shadow: 3px 3px #ff0000;*/
 }

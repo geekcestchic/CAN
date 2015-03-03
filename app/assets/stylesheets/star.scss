@@ -1,20 +1,30 @@
-.rating-box{
-  // border:solid 1px black;
-  width: 137px;
-  padding:0;
-  font-size:0;
-  margin: 20px;
-  .star{
-    width: 25px;
-    height: 25px;
-    margin:0;
-    // border:1px dotted black;
-    display: inline-block;
-    background: url('staroff.png');
-    background-size: 100%;
+.rating{
+  text-align:right;
+  p{
+    margin: 0 20px;
   }
-  .star.hover{
-    background: url('staron.png');
-    background-size: 100%;
+ 
+  .rating-box{
+    // border:solid 1px black;
+    float:right;
+    width: 170px;
+    padding: 0;
+    .star{
+      width: 30px;
+      height: 30px;
+      margin:0;
+      // border:1px dotted black;
+      display: inline-block;
+      background: url('staroff.png');
+      background-size: 100%;
+      background-repeat: no-repeat;
+    }
+    .star.hover{
+      background: url('staron.png');
+      background-size: 100%;
+      background-repeat: no-repeat;
+    }
   }
 }
+
+
