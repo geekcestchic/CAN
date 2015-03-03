@@ -31,9 +31,4 @@ class User < ActiveRecord::Base
   def following?(other_user)
     following.include?(other_user)
   end
-
-  # has_many :followers, :class_name => "User",
-  #   :foreign_key => "follower_id"
-  # belongs_to :followee, :class_name => "User",
-  #   :foreign_key => "follower_id"
 end
