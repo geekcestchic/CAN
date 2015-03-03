@@ -11,7 +11,7 @@
     console.log('does this even work')
     $('<li>'
       +'<p>' + comment.content+'</p>'
-      +'<p>Comment by: ' + comment.user_id + comment.created_at + '</p>'
+      +'<p>Comment by: ' + comment.user_id + ' @'+comment.created_at + '</p>'
       +'</li>')
     .prependTo("#comments")
   }
@@ -36,13 +36,10 @@
     $('#comment-box').val("")
   }
 
-function ready(){
+$(document).ready(function(){
   console.log('Comments.js loaded');
   getComments();
   $('#comment-box').on('keypress', function(e){
     if (e.which === 13) createComment()
   });
-}
-
-$(document).ready(ready)
-$(document).on('page:load', ready)
+});

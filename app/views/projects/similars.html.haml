@@ -1,4 +1,4 @@
 %h1 Which projects do you reckon this one is similar to?
-= simple_form_for @project, method: "PUT" do |f|
-  =f.association :similars, as: :check_boxes
+= simple_form_for @project do |f|
+  =f.association :projects, as: :check_boxes
   =f.submit "Confirm"

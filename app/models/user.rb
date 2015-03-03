@@ -5,9 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
   has_many :projects
   has_many :comments
-
-  has_many :followers, :class_name => "User",
-    :foreign_key => "follower_id"
-  belongs_to :followee, :class_name => "User",
-    :foreign_key => "follower_id"
+  
+  # letsrate_rater
+  
 end

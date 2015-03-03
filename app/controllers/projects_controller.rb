@@ -27,7 +27,15 @@ class ProjectsController < ApplicationController
     # render json: @project, status: :created
   end
 
+  def update
+    binding.pry
+    @project = Project.find(params[:id])
+    @project.update project_params
+    # head :no_content, status: :ok  //no need for this right now as doing a traditional rails redirect
+    redirect_to project_path(@project)
+  end
+
   def project_params
-    params.require(:project).permit(:user_id, :title, :content, :video, :image, :parent_project_id)
+    params.require(:project).permit(:user_id, :title, :content, :video, :image, { project_ids: [] })
   end
 end

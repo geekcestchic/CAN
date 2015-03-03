@@ -1,6 +1,8 @@
 %h1= @project.title
 %p= @project.content
 
+/ = rating_for @project
+
 / - if user_signed_in?
 %input#comment-box{ data: {project_id: @project.id } }
 %ul#comments
@@ -8,3 +10,8 @@
 /   %p You must be signed in to comment
 
 = link_to 'Know a similar Project?', projects_similars_path(@project)
+
+#similars
+  %P Similar Projects
+  - @project.similar_projects.each do |project|
+    = project.title

@@ -23,10 +23,7 @@ function getProjects(){
   });
 }
 
-function ready(){
+$(document).ready(function(){
   console.log('Project.js loaded')
   getProjects()
-}
-
-$(document).ready(ready)
-$(document).on('page:load', ready)
+});
