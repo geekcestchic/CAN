@@ -1,7 +1,12 @@
 %h1= @project.title
 %p= @project.content
 
-/ = rating_for @project
+.rating-box
+  .star#one
+  .star#two
+  .star#three 
+  .star#four
+  .star#five
 
 / - if user_signed_in?
 %input#comment-box{ data: {project_id: @project.id } }

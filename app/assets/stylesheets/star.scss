@@ -1,0 +1,20 @@
+.rating-box{
+  // border:solid 1px black;
+  width: 137px;
+  padding:0;
+  font-size:0;
+  margin: 20px;
+  .star{
+    width: 25px;
+    height: 25px;
+    margin:0;
+    // border:1px dotted black;
+    display: inline-block;
+    background: url('staroff.png');
+    background-size: 100%;
+  }
+  .star.hover{
+    background: url('staron.png');
+    background-size: 100%;
+  }
+}

@@ -8,7 +8,7 @@
   }
 
   function prependToPage(comment){
-    console.log('does this even work')
+    // console.log('does this even work')
     $('<li>'
       +'<p>' + comment.content+'</p>'
       +'<p>Comment by: ' + comment.user_id + ' @'+comment.created_at + '</p>'
@@ -19,10 +19,10 @@
   function getComments() {
     request("GET", "/comments", null)
     .done(function(data){
-      console.log(data)
+      // console.log(data)
       $.each(data, function(index,comment){
         prependToPage(comment)
-        console.log('does this shit work?')
+        // console.log('does this work?')
       });
     });
   }
