@@ -2,14 +2,18 @@
 %p= @project.content
 
 .rating-box
-  .star#one
-  .star#two
-  .star#three 
-  .star#four
-  .star#five
+  .star#one{data:{rating:1}}
+  .star#two{data:{rating:2}}
+  .star#three{data:{rating:3}}
+  .star#four{data:{rating:4}}
+  .star#five{data:{rating:5}}
+.notify
+
+.average-rating
+  %p= "Average rating: #{@project.average_rating}"
 
 / - if user_signed_in?
-%input#comment-box{ data: {project_id: @project.id } }
+%input#comment-box{ data: {project_id: @project.id }, placeholder: "Comment on this project!", title: "Press Enter to Submit" }
 %ul#comments
 / - else 
 /   %p You must be signed in to comment
@@ -20,3 +24,10 @@
   %P Similar Projects
   - @project.similar_projects.each do |project|
     = project.title
+
+- if user_signed_in?
+  - if @project.user_id = current_user.id
+    = link_to 'Edit', edit_project_path(@project)
+    = link_to 'Delete', project_path(@project), method: :delete
+
+= link_to 'Back', projects_path
