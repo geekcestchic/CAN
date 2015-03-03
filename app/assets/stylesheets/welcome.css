@@ -8,6 +8,7 @@ body {
 #carousel {
     width: 480px;
     overflow:hidden;
+    margin: 0 auto;
   }
 
 #carousel ul {
@@ -16,13 +17,14 @@ body {
   margin: 0;
 }
 
-  #carousel ul li {
-    width:480px;
-    text-align: center;
-    height: 280px;
-    list-style: none;
-    float:  left;
-  }
+#carousel ul li {
+  width:480px;
+  text-align: center;
+  height: 280px;
+  list-style: none;
+  float:  left;
+}
+
 ul {
   padding:0px;
   margin:0px;
@@ -113,18 +115,12 @@ div.slotHole {
   text-shadow: 3px 3px #ff0000;
 }
 
-
-
-
 input#form {
   width: 100px;
   height:35px;
   margin:10px;
   font-size: 20px;
 }
-
-
-
 
 p {
   color: #FCC542;
@@ -134,7 +130,4 @@ p {
   font-weight: bold;
   color: #FCC542;
   text-shadow: 3px 3px #ff0000;
-}
-
-
 }
