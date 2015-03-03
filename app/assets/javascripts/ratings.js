@@ -7,10 +7,14 @@ function request(method, url, data){
   })
 }
 
-function fillStars(){
-  var id = $(this).context.id
-  $(this).addClass('hover');
+function fillStar(element){
+  element.addClass('hover');
+}
 
+function fillStars(){
+  var id = $(this).context.id;
+  $(this).addClass('hover');
+// not very dry, can refactor using the data if have time
   if (id === 'five'){
     $('#four').addClass('hover');
     $('#three').addClass('hover');
@@ -32,7 +36,7 @@ function fillStars(){
 }
 
 function unfillStars(){
-  var id = $(this).context.id
+  var id = $(this).context.id;
   $(this).removeClass('hover');
 
   if (id === 'five'){
@@ -56,17 +60,21 @@ function unfillStars(){
 }
 
 function submitRating(){
-  var id = $(this).context.id
-  console.log('submit rating of ' + id)
-  if (id === 'five'){
-    request("POST", 
-      "/projects/" + $('#comment-box').data('project-id') + "/ratings", 
-      {rating:{value: 5, project_id: $('#comment-box').data('project-id')}})
-    .done(function(data){
-      console.log('Thanks! You have just rated this idea ' + data + ' stars.')
-      // $('.notice').prepend('Thanks! You have just rated this idea ' + data + ' stars.')
-    });
-  }
+  
+  var id = $(this).context.id;
+  var projectId = $('#comment-box').data('project-id');
+  var rating = $(this).context.dataset.rating;
+
+  request("POST", "/projects/" + projectId + "/ratings", 
+    { rating: { 
+      value: rating, project_id: projectId
+    }
+  })
+  .done(function(data){
+    $('.notify').append('<p>Rating received!</p>');
+    $('.rating-box').html('');
+  });
+
 }
 
 function getAverage(){

@@ -15,4 +15,5 @@ class Project < ActiveRecord::Base
   def similar_projects
     self.projects.where.not(id: self.id)
   end
+
 end
