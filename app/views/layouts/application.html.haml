@@ -3,10 +3,8 @@
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     %title Can
-    = stylesheet_link_tag    'application', media: 'all'
-    = javascript_include_tag 'application'
-    %script{:charset => "utf-8", :src => "/assets/jquery.easing.1.3.js"}
-    %script{:charset => "utf-8", :src => "/assets/jquery.jSlots.js"}
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
     %p.notice= notice
@@ -18,14 +16,15 @@
       - else
         = link_to "Sign In", new_user_session_path
         = link_to "Register", new_user_registration_path
-    %header
-      %input{placeholder: "Search", type: "text"}
-        %ul
-          %li
-            %a{href: ""} Ideas
-          %li
-            %a{href: ""} Create An Idea
-          %li
-            %a{href: ""} My Profile
-        %h1 Sticky Header
+    / %header
+    /   %input{placeholder: "Search", type: "text"}
+    /     %ul
+    /       %li
+    /         %a{href: ""} Ideas
+    /       %li
+    /         %a{href: ""} Create An Idea
+    /       %li
+    /         %a{href: ""} My Profile
+    /     %h1 Sticky Header
     = yield
+

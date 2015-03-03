@@ -69,11 +69,6 @@ ActiveRecord::Schema.define(version: 20150303110849) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "similarities", force: :cascade do |t|
-    t.integer "similee_id"
-    t.integer "similar_id"
-  end
-
   create_table "relationships", force: :cascade do |t|
     t.integer  "follower_id"
     t.integer  "followed_id"
@@ -84,6 +79,11 @@ ActiveRecord::Schema.define(version: 20150303110849) do
   add_index "relationships", ["followed_id"], name: "index_relationships_on_followed_id", using: :btree
   add_index "relationships", ["follower_id", "followed_id"], name: "index_relationships_on_follower_id_and_followed_id", unique: true, using: :btree
   add_index "relationships", ["follower_id"], name: "index_relationships_on_follower_id", using: :btree
+
+  create_table "similarities", force: :cascade do |t|
+    t.integer "similee_id"
+    t.integer "similar_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
