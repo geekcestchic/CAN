@@ -51,7 +51,6 @@ function submitRating(){
   var id = $(this).context.id
   rating = 0
   console.log('submit rating of '+id)
-  if (id === 'five')
 }
 
 $(document).ready(function(){
