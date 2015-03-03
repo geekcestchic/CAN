@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  post '/rate' => 'rater#create', :as => 'rate'
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
@@ -8,7 +9,7 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
   # Example of regular route:
-  #   get 'products/:id' => 'catalog#view'
+    get 'projects/:id/similars' => 'projects#similars', as: :projects_similars
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
