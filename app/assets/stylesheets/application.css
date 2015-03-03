@@ -13,7 +13,7 @@
  *= require_tree .
  *= require_self
  */
-<<<<<<< HEAD
+
 
 * {
   box-sizing: content-box;
@@ -73,8 +73,3 @@ header.sticky {
   padding-left: 20px;
   transition: all 0.2s ease;
 }
-=======
-*{
- box-sizing: content-box;
-}
->>>>>>> origin/projects
