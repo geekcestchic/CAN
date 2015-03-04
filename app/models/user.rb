@@ -17,6 +17,10 @@ class User < ActiveRecord::Base
   has_many :followers, through: :passive_relationships
 
   
+  def role?(role_to_compare)
+    self.role.to_s == role_to_compare.to_s
+  end
+  
   #Follows a user.
   def follow(other_user)
     active_relationships.create(followed_id: other_user.id)
