@@ -24,13 +24,13 @@
           %li
             %a{href: "/users/:id"} My Profile
           %li
-            %a{href: "#{destroy_user_session_path}", method: :delete} Log Out
+            %a{href: "destroy_user_session_path", method: :delete} Log Out
       - else
         %ul
           %li
             %a{href: "/projects"} Ideas
           %li
-            %a{href: "#{new_user_session_path}"} Sign In
+            %a{href: "/new_user_session_path"} Sign In
           %li
             %a{href: "#{new_user_registration_path}"} Register
     .content_container    

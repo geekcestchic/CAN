@@ -13,8 +13,8 @@ body {
 .slideshow-container {
   position:relative;
 
-  width:900px;
-  height:480px;
+  width:480px;
+  height:280px;
   margin:2em auto;
 
   border:1px solid #666;
@@ -30,7 +30,6 @@ body {
   position:relative;
   float:left;
   opacity:0;  /*initial state*/ 
-  z-index:-1;
 }
 
 
@@ -80,7 +79,7 @@ h6 {
 
 input#playBtn {
   height:30px;
-  padding-bottom: 30px;
+  padding: 30px;
   font-size:20px;
 }
 
