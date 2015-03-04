@@ -1,33 +1,41 @@
 
 //index page
-#projects{
-  margin:20px;
-  text-align: center;
-  width:100%;
-  h2{
-    height:20px;
-    margin:0 50px;
-    float:left;
-  }
-  p{
-    float:right;
-    margin:0 50px;
-    text-decoration: none;
-  }
-  .project{
-    // padding:10px;
-    margin:0px;
-    height:50px;
-    list-style-type: none;
-  }
-  .project:hover{
-    background:#C34B71;
-    color:white
-    a{
-      color:white;
+.projects-container{
+  margin: 20px;
+  padding:20px;
+
+  #projects{
+    border-top:solid 1px black;
+    margin:20px 0;
+    text-align: center;
+    width:100%;
+    h2{
+      height:20px;
+      margin:0 50px;
+      float:left;
+    }
+    p{
+      float:right;
+      margin:0 50px;
+      text-decoration: none;
+    }
+    .project{
+      // padding:10px;
+      border-bottom: dotted 1px black;
+      margin:0px;
+      height:50px;
+      list-style-type: none;
+    }
+    .project:hover{
+      background:#C34B71;
+      color:white
+      a{
+        color:white;
+      }
     }
   }
 }
+
 
 //show page
 .project-page{
@@ -49,6 +57,57 @@
       padding:5px;
     }
   }
+  .small{
+    font-size: 12px;
+  }
+
+  .message{
+    background:black;
+    color:white;
+    width: 250px;
+    padding: 20px;
+    text-align: center;
+    border-radius:5px;
+  }
   
 }
 
+//form page
+#form{
+  color:black;
+  margin: 20px;
+  border-radius:10px;
+  text-align:center;
+  padding: 20px;
+  border: 1px dotted grey;
+  input{
+    border-radius:5px;
+    padding:10px;
+    font-size: 18px;
+    border:none;
+    background:lightgrey;
+    color:black;
+    width:300px;
+  }
+  #project_content{
+    height:300px;
+  }
+  input[type="submit"]{
+    background:black;
+    color:white
+  }
+
+}
+.footer{
+  margin:0;
+  padding: 10px;
+  text-align: center;
+  background: black;
+  a{
+    margin: 0 30px;
+    color:white;
+  }
+  a:hover{
+    text-decoration: underline;
+  }
+}

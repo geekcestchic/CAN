@@ -11,7 +11,7 @@
     // console.log('does this even work')
     $('<li>'
       +'<p>' + comment.content+'</p>'
-      +'<p>Comment by: ' + comment.user_id + ' @'+comment.created_at + '</p>'
+      +'<p class="small">Comment by: ' + comment.user+ ' @'+comment.created_at + '</p>'
       +'</li>')
     .prependTo("#comments")
   }
