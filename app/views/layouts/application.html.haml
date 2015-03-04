@@ -18,13 +18,15 @@
       - if user_signed_in?
         %ul
           %li
-            %a{href: "/projects"} Ideas
+            = link_to 'Ideas', projects_path
           %li
-            %a{href: "/projects/new"} Create An Idea
+            = link_to 'Create An Idea', new_project_path 
           %li
-            %a{href: "/users/:id"} My Profile
+            = link_to 'Users', users_path
           %li
-            %a= link_to('Log Out', destroy_user_session_path, method: :delete)
+            = link_to 'Profile', user_path(current_user)
+          %li
+            = link_to 'Log Out', destroy_user_session_path, method: :delete
       - else
         %ul
           %li
