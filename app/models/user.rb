@@ -23,11 +23,39 @@ class User < ActiveRecord::Base
       user.uid = auth.uid
       user.email = auth.info.email
       user.password = Devise.friendly_token[0,20]
-      user.firstname = auth.info.firstname
-      user.avatar = auth.info.avatar
+      user.firstname = auth.info.name
+      user.avatar = auth.info.image
     end
   end
 
+  def self.new_with_session(params, session)
+    super.tap do |user|
+      if data = session['devise.facebook'] && session ['devise.facebook_data']['extra']['raw_info']
+        user.email = data['email'] if user.email.blank?
+      end
+    end
+  end
+
+  def self.find_for_twitter(auth, signed_in_user=nil)
+    twitter_email = auth.info.nickname.downcase + "@twitter.com"
+    if user = signed_in_user || User.find_by_email(twitter_email)
+      user.provider = auth.provider
+      user.uid = auth.uid
+      user.firstname = auth.info.name
+      user.avatar = auth.info.image
+      user.save
+      user
+    else
+      where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
+        user.provider = auth.provider
+        user.uid = auth.uid
+        user.firstname = auth.info.name
+        user.avatar = auth.info.image
+        user.email = twitter_email
+        user.password = Devise.friendly_token[0,20]
+      end
+    end
+  end
   
   def role?(role_to_compare)
     self.role.to_s == role_to_compare.to_s
