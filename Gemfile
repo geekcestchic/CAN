@@ -1,9 +1,11 @@
 source 'https://rubygems.org'
 
-gem 'filterrific'
 gem 'simple_form'
 gem 'haml-rails'
 gem 'devise'
+gem 'omniauth'
+gem 'omniauth-twitter'
+gem 'omniauth-facebook'
 gem 'rails_admin'
 gem 'carrierwave'
 gem 'rmagick', '~> 2.13.4'

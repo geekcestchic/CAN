@@ -3,16 +3,16 @@
   #header
     
   #welcome-container
-    #carousel
-      %ul
-        %li
-          %img{:alt => "Fish", :src => "/assets/fish.jpg"}/
-        %li
-          %img{:alt => "Elephant", :src => "/assets/elephant.jpg"}/
-        %li
-          %img{:alt => "Giraffe", :src => "/assets/giraffe.jpg"}/
-        %li
-          %img{:alt => "Penguins", :src => "/assets/penguins.jpg"}/
+    .slideshow-container
+      .slideshow-images
+        -# %li
+        -#   %img{:alt => "Fish", :src => "/assets/fish.jpg"}/
+        -# %li
+        -#   %img{:alt => "Elephant", :src => "/assets/elephant.jpg"}/
+        -# %li
+        -#   %img{:alt => "Giraffe", :src => "/assets/giraffe.jpg"}/
+        -# %li
+        -#   %img{:alt => "Penguins", :src => "/assets/penguins.jpg"}/
     #main
       .nav
         %p Services
@@ -78,9 +78,6 @@
             %li Creation
             %li Participation
         %input#form{:minlength => "2", :name => "form", :placeholder => "Add more!", :title => "List Form", :type => "text", :value => ""}
-      / div class nav end
-    #button
-      / this button will start the spin
-      %input#playBtn{:type => "button", :value => "play"}
-    / #button
-  / #container
+      #button
+        / this button will start the spin
+        %input#playBtn{:type => "button", :value => "play"}
