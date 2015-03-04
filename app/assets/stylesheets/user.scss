@@ -1,25 +1,43 @@
 //index users page
 .user-box{
   width: 30%;
-  float:left;
   display: inline-block;
   text-align:center;
-  border:dotted 1px black;
+  border:solid 5px black;
+  margin:5px;
   .image{
     border-radius:200px;
+  }
+  p{
+    background:black;
+    color:white;
+    padding:10px;
   }
 }
 
 
 //show page
-.user{
- width: 30%;
- float:left;
- padding: 20px;
- img{
+.user-header{
+  margin:0;
+  padding: 30px;
+  background:black;
+  background-image: url('robot.jpg');
+  .image{
+  background:black;
   border-radius: 200px;
-  border:solid black 5px;
- }
+  border:solid white 5px;
+  }
+}
+.user{
+  width: 30%;
+  float:left;
+  padding: 20px;
+  input{
+    background:black;
+    border:none;
+    color:white;
+  }
+  
 }
 #user-projects{
   width: 60%;

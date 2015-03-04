@@ -16,7 +16,7 @@ function addToPage(project){
   $('<li class="project"><h2><a href="/projects/'
     + project.id +'">'+title+
     '</a></h2><p>'+content+'</p></li>')
-  .prependTo("#projects")
+  .prependTo(".container#projects")
 }
 
 function getProjects(){

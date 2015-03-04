@@ -21,14 +21,14 @@ function addToPage(project){
 }
 
 function getCurrentUserProjects(){
+  // var userId = $('#user-projects')[0].dataset.userid;
+  // console.log(userId); 
   request("GET","/projects", null).done(function(data){
     $.each(data, function(index,project){
-      var userId = $('#user-projects')[0].dataset.userid;   
-      console.log(userId);
-      //the crucial bit, filtering out only the ones from current user
-      if (project.user_id === userId) {
-        addToPage(project)
-      }
+      // //the crucial bit, filtering out only the ones from current user
+      // if (project.user_id === userId) {
+      //   addToPage(project)
+      // }
     });
   });
 }

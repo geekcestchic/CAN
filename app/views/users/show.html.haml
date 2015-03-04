@@ -1,15 +1,17 @@
+.user-header
+  = image_tag @user.avatar, class: 'image'
+
 .user
-  = image_tag @user.avatar
-  %h1
-    = @user.firstname 
-    = @user.lastname
+  
+  %h1 #{@user.firstname} #{@user.lastname}
   = render 'users/stats'
   = render 'follow_form' if user_signed_in?
   %h2
     = @user.location
   %p= @user.bio
 
-  = render 'users/stats'
-  = render 'follow_form' if user_signed_in?
+#user-projects{data:{userid:params[:id]}}
 
-#user-projects{data:{userid: params[:id]}}
+
+  - if params[:id] == current_user.id
+    = link_to 'Edit My Profile', edit_user_registration_path(current_user)

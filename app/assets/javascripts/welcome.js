@@ -1,25 +1,20 @@
-
-//wait for the page to be ready
 $(document).ready(function(){
 
-  //create an array of images from the 'images' folder
   var imagePath = '/assets/';
   var images = ['fish.jpg', 'elephant.jpg', 'giraffe.jpg', 'penguins.jpg'];
 
-  // create the .slideshow-nav container
-  // could also do $(element1).after(element2) --> reversed
+  $("currentSlide").wrap("<a href='/projects/new'></a>");
+
+
   $('<div class="slideshow-nav"></div>').insertAfter('.slideshow-container');
 
-  //loop through the images and add to the empty container on the page
   $.each(images, function(index, value){
     $('<img src="' + imagePath + value + '">').appendTo('.slideshow-images');
     $('<a href="#"></a>').appendTo('.slideshow-nav');
   });
 
-  //fade the images in
   $('.slideshow-images img').animate({opacity: 1}, 3000);
 
-  //watch for clicks on the slideshow nav
   var imageWidth = $('.slideshow-container').width();
   $('.slideshow-nav a').on('click', function(){
     var index = $(this).index();
@@ -29,7 +24,6 @@ $(document).ready(function(){
     $(this).addClass('is-active').siblings().removeClass('is-active');
   });
 
-  //auto advance the slideshow
   var currentSlide = 0;
   setInterval(function(){
     //trigger a click on the first nav item
@@ -41,6 +35,8 @@ $(document).ready(function(){
     }
     $('.slideshow-nav a').eq(currentSlide++).trigger('click')
   }, 3000)
+
+
 
 });
 
