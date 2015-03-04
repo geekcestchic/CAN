@@ -4,7 +4,7 @@ $(document).ready(function(){
 
   //create an array of images from the 'images' folder
   var imagePath = '/assets/';
-  var images = ['fish.jpg', 'elephant.jpg', 'giraffe.jpg'];
+  var images = ['fish.jpg', 'elephant.jpg', 'giraffe.jpg', 'penguins.jpg'];
 
   // create the .slideshow-nav container
   // could also do $(element1).after(element2) --> reversed
