@@ -14,12 +14,24 @@
  *= require_self
  */
 
+
 * {
   box-sizing: content-box;
+  font-family: 'News Cycle', sans-serif;
+}
+
+h1{
+  margin: 50px;
+  font-size:40px;
+}
+a{
+  text-decoration: none;
+  color:black;
 }
 
 header{
   position: fixed;
+  top:0;
   width: 100%;
   text-align: center;
   font-size: 50px;
@@ -74,5 +86,5 @@ header.sticky {
 }
 
 .content_container {
-  padding-top: 190px;
+  padding-top: 250px;
 }
