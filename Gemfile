@@ -3,13 +3,10 @@ source 'https://rubygems.org'
 gem 'simple_form'
 gem 'haml-rails'
 gem 'devise'
-<<<<<<< HEAD
 gem 'cancancan'
-=======
 gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'omniauth-facebook'
->>>>>>> bf76bafc883f6f5e3953a339f212bece49077255
 gem 'rails_admin'
 gem 'carrierwave'
 gem 'rmagick', '~> 2.13.4'
