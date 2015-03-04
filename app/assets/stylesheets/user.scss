@@ -1,0 +1,29 @@
+//index users page
+.user-box{
+  width: 30%;
+  float:left;
+  display: inline-block;
+  text-align:center;
+  border:dotted 1px black;
+  .image{
+    border-radius:200px;
+  }
+}
+
+
+//show page
+.user{
+ width: 30%;
+ float:left;
+ padding: 20px;
+ img{
+  border-radius: 200px;
+  border:solid black 5px;
+ }
+}
+#user-projects{
+  width: 60%;
+  float: right;
+  border: 1px dotted black;
+  margin: 20px;
+}
