@@ -28,11 +28,15 @@ class ProjectsController < ApplicationController
   end
 
   def update
-    binding.pry
     @project = Project.find(params[:id])
     @project.update project_params
     # head :no_content, status: :ok  //no need for this right now as doing a traditional rails redirect
     redirect_to project_path(@project)
+  end
+
+  def destroy
+    @project = Project.find(params[:id])
+    @project.destroy
   end
 
   def project_params

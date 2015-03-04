@@ -17,7 +17,8 @@
   }
 
   function getComments() {
-    request("GET", "/comments", null)
+    var projectId = $('#comment-box').data('project-id');
+    request("GET", "/projects/" + projectId + "/comments", null)
     .done(function(data){
       // console.log(data)
       $.each(data, function(index,comment){
@@ -28,8 +29,11 @@
   }
 
   function createComment(){
+    
+    var projectId = $('#comment-box').data('project-id');
+
     console.log('you have commented!')
-    request("POST", "/comments", {comment:{content: $('#comment-box').val()}}).done(function(data){
+    request("POST", "/projects/" + projectId + "/comments", {comment:{content: $('#comment-box').val()}}).done(function(data){
       prependToPage(data)
       console.log('Your comment will appear here')
     });

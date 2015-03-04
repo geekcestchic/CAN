@@ -1,3 +1,7 @@
+.welcome-container{
+
+}
+
 body { 
   font-family: Arial, Verdana, sans-serif;
   line-height:1.4;
@@ -5,31 +9,58 @@ body {
   padding:0;
 }
 
-#carousel {
-    width: 480px;
-    overflow:hidden;
-    margin: 0 auto;
-  }
+/* slideshow components */
+.slideshow-container {
+  position:relative;
 
-#carousel ul {
-  width: 1920px;
-  padding: 0;
-  margin: 0;
-}
-
-#carousel ul li {
   width:480px;
-  text-align: center;
-  height: 280px;
-  list-style: none;
-  float:  left;
+  height:280px;
+  margin:2em auto;
+
+  border:1px solid #666;
+  box-shadow:inset 0 0 25px rgba(0,0,0,0.6);
+  overflow:hidden;
 }
 
-ul {
+/* the container for all the images */
+.slideshow-images {
+  width:2700px;
+}
+.slideshow-images img {
+  position:relative;
+  float:left;
+  opacity:0;  /*initial state*/ 
+}
+
+
+/* slideshow navigation and pager */
+.slideshow-nav {
+  text-align:center;
+}
+.slideshow-nav a {
+  display:inline-block;
+  width:1em;
+  height:1em;
+  margin:0 0.25em;
+
+  background:#fff;
+  border:1px solid #666;
+  border-radius:100%;
+  -webkit-transition:0.3s;
+          transition:0.3s;
+}
+.slideshow-nav a:hover {
+  background:#ccc;
+}
+.slideshow-nav .is-active {
+  background:#999;
+}
+
+.nav ul {
   padding:0px;
   margin:0px;
 }
-li {
+.nav li {
   padding:0px;
   margin:0px;
 }
@@ -47,18 +78,15 @@ h6 {
 
 
 input#playBtn {
-  clear: both;
-  float:center;
-  right:-70%;
   height:30px;
-  padding-bottom: 30px;
+  padding: 30px;
   font-size:20px;
 }
 
 div#button {
-  float:left;
-  right:16%;
+  right:50%;
   position:relative;
+  bottom: 0px;
 }
 
 
@@ -70,8 +98,7 @@ div.nav {
   position:relative;
   list-style:none;
   font-weight: bold;
-  color: #FCC542;
-  text-shadow: 3px 3px #ff0000;
+
 }
 
 
@@ -92,7 +119,7 @@ div.nav {
      }
 
 div.slotHole {
-    border: 15px solid grey;
+    border: 1px solid grey;
     border-style:ridge;
   
 }  
@@ -101,7 +128,6 @@ div.slotHole {
   height: 100px;
   text-align: center;
   list-style: none;
-  color: #FCC542;
   padding-top: 20px;
   font-size: 20px;
 }
@@ -111,8 +137,6 @@ div.slotHole {
   list-style:none;
   margin:0;
   font-weight: bold;
-  color: #FCC542;
-  text-shadow: 3px 3px #ff0000;
 }
 
 input#form {
@@ -123,11 +147,10 @@ input#form {
 }
 
 p {
-  color: #FCC542;
   font-size: 24px;
   list-style:none;
   margin:0;
-  font-weight: bold;
+  /*font-weight: bold;
   color: #FCC542;
-  text-shadow: 3px 3px #ff0000;
+  text-shadow: 3px 3px #ff0000;*/
 }
