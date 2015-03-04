@@ -1,9 +1,5 @@
 
 
-  $('#newBtn').on('click', function(){
-    location = "/projects/new"
-  }
-
 
 
 //wait for the page to be ready
@@ -11,7 +7,7 @@ $(document).ready(function(){
 
 
 
-
+  
 
   //create an array of images from the 'images' folder
   var imagePath = '/assets/';
