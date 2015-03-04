@@ -19,4 +19,5 @@ class Project < ActiveRecord::Base
   def average_rating
     ratings.inject(0.0){ |sum, el| sum + el.value }.to_f / ratings.size
   end
+  
 end

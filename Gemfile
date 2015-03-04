@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'filterrific'
 gem 'simple_form'
 gem 'haml-rails'
 gem 'devise'

@@ -1,10 +1,14 @@
 class ProjectsController < ApplicationController
+  respond_to :html, :json
+  
   def index
     @projects = Project.all
+
     respond_to do |format|
       format.html
       format.json { render json: @projects }
     end
+
   end
 
   def show
@@ -40,6 +44,7 @@ class ProjectsController < ApplicationController
   end
 
   def project_params
-    params.require(:project).permit(:user_id, :title, :content, :video, :image, { project_ids: [] })
+    params.require(:project).permit(:user_id, :title, :content, :video, :image, { project_ids: [] }, { category_ids: []})
   end
+
 end
