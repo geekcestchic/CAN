@@ -15,3 +15,5 @@
 
   - if params[:id] == current_user.id
     = link_to 'Edit My Profile', edit_user_registration_path(current_user)
+.user-footer
+  =link_to(image_tag('lightbulb.svg', class:'image', title:'INSPIRED???'), new_project_path)

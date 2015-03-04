@@ -1,5 +1,6 @@
 .project-page
   %h1= @project.title
+  = image_tag 'lightbulb.svg',class: 'image'
   %p= @project.content
   .rating
     .rating-box
@@ -25,7 +26,7 @@
   #similars
     %P Similar Projects
     - @project.similar_projects.each do |project|
-      = project.title
+      = link_to project.title, project_path(project), class: 'link'
 
 .footer
   - if user_signed_in?

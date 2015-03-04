@@ -5,6 +5,7 @@
   text-align:center;
   border:solid 5px black;
   margin:5px;
+  border-radius:10px;
   .image{
     border-radius:200px;
   }
@@ -40,8 +41,25 @@
   
 }
 #user-projects{
-  width: 60%;
+  background:black;
+  padding:20px;
+  color:white;
+  width: 55%;
   float: right;
   border: 1px dotted black;
-  margin: 20px;
+  margin: 0px;
+  a{
+    color:white;
+  }
+  li{
+    text-decoration:none;
+  }
+}
+.user-footer{
+  float:right;
+  break:right;
+  margin: 20px 220px;
+  .image{
+    height:150px;
+  }
 }
