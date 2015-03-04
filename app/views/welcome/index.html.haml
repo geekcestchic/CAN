@@ -3,6 +3,7 @@
   #header
     
   #welcome-container
+  .slideshow
     .slideshow-container
       .slideshow-images
         -# %li
@@ -13,6 +14,7 @@
         -#   %img{:alt => "Giraffe", :src => "/assets/giraffe.jpg"}/
         -# %li
         -#   %img{:alt => "Penguins", :src => "/assets/penguins.jpg"}/
+  .slotdiv
     #main
       .nav
         %p.slot Services
@@ -81,3 +83,4 @@
       #button
         / this button will start the spin
         %input#playBtn{:type => "button", :value => "play"}
+        %input#newBtn{:type => "button", :value => "get feedback on this idea"}

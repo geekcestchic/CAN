@@ -7,16 +7,20 @@ body.welcome {
   padding:0;
 }
 
+.slideshow {
+  background-color: blue;
+  height: 500px;
+}
+
 /* slideshow components */
 .slideshow-container {
   position:relative;
+  padding-top: 80px;
 
   width:480px;
   height:280px;
   margin:2em auto;
 
-  border:1px solid #666;
-  box-shadow:inset 0 0 25px rgba(0,0,0,0.6);
   overflow:hidden;
 }
 
@@ -54,6 +58,11 @@ body.welcome {
   background:#999;
 }
 
+.slotdiv {
+  background-color:red;
+  height: 500px;
+}
+
 .nav ul {
   padding:0px;
   margin:0px;
@@ -71,15 +80,19 @@ div#container {
 
 
 input#playBtn {
-  height:30px;
-  padding: 30px;
+  display: block;
+  font-size:20px;
+  margin-bottom: 5px;
+  margin: 0 auto;
+}
+
+input#newBtn {
   font-size:20px;
 }
 
 div#button {
-  right:50%;
-  position:relative;
-  bottom: 0px;
+  float:right;
+  padding-right: 660px;
 }
 
 
