@@ -80,8 +80,8 @@ ActiveRecord::Schema.define(version: 20150303151122) do
   add_index "relationships", ["follower_id"], name: "index_relationships_on_follower_id", using: :btree
 
   create_table "similarities", force: :cascade do |t|
-    t.integer "similar_id"
     t.integer "similee_id"
+    t.integer "similar_id"
   end
 
   create_table "users", force: :cascade do |t|
