@@ -6,5 +6,7 @@
   = @user.location
 %p= @user.bio
 
+= link_to 'Edit Profile', edit_user_registration_path(current_user)
+
 = render 'users/stats'
 = render 'follow_form' if user_signed_in?
