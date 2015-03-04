@@ -1,4 +1,7 @@
 .projects-container
   %h1 Projects
-  = link_to '+ Share your own idea!', new_project_path
+  - if user_signed_in?
+    = link_to '+ Share your own idea!', new_project_path
+  - else 
+    .message you must create an account to share a new idea!
   .container#projects

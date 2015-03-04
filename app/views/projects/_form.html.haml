@@ -8,8 +8,8 @@
           - @project.errors.full_messages.each do |message|
             %li= message
 
-    %p= f.text_field :title, placeholder: "What's it called?"
-    %p= f.text_field :content, placeholder: "Tell us a bit more!"
+    %p= f.text_field :title, placeholder: "What's it called?", id: "input"
+    %p= f.text_area :content, placeholder: "Tell us a bit more!", id: "input"
     %p= f.association :categories, as: :check_boxes, label:"Pick categories it falls under"
     %p= f.association :brands, as: :check_boxes, label: "Pick famous brands your project would ressemble"
-    %p= f.submit 'Share your idea with the world!'
+    %p= f.submit 'Share your idea with the world!', id: "input"

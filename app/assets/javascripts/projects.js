@@ -9,9 +9,13 @@ function request(method, url, data){
 
 function addToPage(project){
   // console.log(project)
+  var content = project.content
+  if(content.length > 10) content = content.substring(0,100) + '...'
+  var title = project.title
+  if(title.length > 10) title = title.substring(0,20) + '...'
   $('<li class="project"><h2><a href="/projects/'
-    + project.id +'">'+project.title+
-    '</a></h2><p>'+project.content+'</p></li>')
+    + project.id +'">'+title+
+    '</a></h2><p>'+content+'</p></li>')
   .prependTo("#projects")
 }
 
