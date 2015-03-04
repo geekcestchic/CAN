@@ -86,51 +86,58 @@
 
 
 //form page
-#form{
-  #input{
-    width: 340px;
-    background:lightgrey;
-    border:none;
-    color:white;
-    font-size: 15px;
-    padding:10px;
-  }
-  textarea{
-    height: 300px;
-  }
-  color:black;
-  margin: 20px;
-  border-radius:10px;
-  text-align:center;
-  padding: 20px;
-  border: 1px dotted grey;
-  input{
-    padding:10px;
-    font-size: 18px;
-    border:none;
-    background:lightgrey;
-    color:black;
-    width:300px;
-  }
-  #project_content{
-    height:300px;
-  }
-  input[type="submit"]{
-    background:black;
-    color:white
-  }
-
-}
-.footer{
+.background{
+  background-image: url('lb-bg.jpg');
+  padding:25px;
   margin:0;
-  padding: 10px;
-  text-align: center;
-  background: black;
-  a{
-    margin: 0 30px;
-    color:white;
+  #form{
+    background:darkgrey;
+    opacity:0.8;
+    max-width: 500px;
+    color:black;
+    margin: 20px auto;
+    text-align:center;
+    padding: 20px;
+    #input{
+      width: 340px;
+      background:lightgrey;
+      border:none;
+      color:white;
+      font-size: 15px;
+      padding:10px;
+    }
+    textarea{
+      height: 300px;
+    }
+    
+    input{
+      padding:10px;
+      font-size: 18px;
+      border:none;
+      background:lightgrey;
+      color:black;
+      width:300px;
+    }
+    #project_content{
+      height:300px;
+    }
+    input[type="submit"]{
+      background:black;
+      color:white
+    }
+
   }
-  a:hover{
-    text-decoration: underline;
-  }
+  .footer{
+    margin:0;
+    padding: 10px;
+    text-align: center;
+    background: black;
+    a{
+      margin: 0 30px;
+      color:white;
+    }
+    a:hover{
+      text-decoration: underline;
+    }
+  }  
 }

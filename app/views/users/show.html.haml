@@ -3,17 +3,17 @@
 
 .user
   
-  %h1 #{@user.firstname} #{@user.lastname}
+  %h1 My name is #{@user.firstname} #{@user.lastname}
   = render 'users/stats'
   = render 'follow_form' if user_signed_in?
-  %h2
-    = @user.location
+  %h2 I live in #{@user.location}
   %p= @user.bio
+  = link_to 'Edit My Profile', edit_user_registration_path(current_user) 
+
 
 #user-projects{data:{userid:params[:id]}}
 
 
-  - if params[:id] == current_user.id
-    = link_to 'Edit My Profile', edit_user_registration_path(current_user)
+
 .user-footer
   =link_to(image_tag('lightbulb.svg', class:'image', title:'INSPIRED???'), new_project_path)

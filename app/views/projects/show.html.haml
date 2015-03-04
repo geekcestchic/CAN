@@ -1,6 +1,7 @@
 .project-page
   %h1= @project.title
   = image_tag 'lightbulb.svg',class: 'image'
+  .brilliancs
   %p= @project.content
   .rating
     .rating-box
@@ -11,7 +12,7 @@
       .star#five{data:{rating:5}}
     .notify
 
-    .average-rating
+    .average-rating{data:{rating:@project.average_rating}}
       %p= "Average rating: #{@project.average_rating}"
 
   - if user_signed_in?
