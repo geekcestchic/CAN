@@ -14,12 +14,22 @@
  *= require_self
  */
 
+
 * {
   box-sizing: content-box;
+  font-family: 'News Cycle', sans-serif;
+}
+
+
+a{
+  text-decoration: none;
+  color:black;
 }
 
 header{
   position: fixed;
+  z-index:2;
+  top:0;
   width: 100%;
   text-align: center;
   font-size: 50px;
@@ -32,9 +42,10 @@ header{
 }
 
 header h1 {
-  margin-left: 20px;
-  padding-left: 20px;
+  margin-right: 50px;
+  padding-right: 200px;
   text-align: left;
+  float: right;
 }
 
 header ul {
@@ -53,6 +64,7 @@ header li {
 }
 
 header a {
+  padding-top: 20px;
   text-decoration: none;
   color: white;
 }
@@ -60,7 +72,7 @@ header a {
 header input {
 float: right;
 margin-top: 20px;
-margin-right: 40px;
+margin-right: 90px;
 padding: 20px;
 }
 
@@ -74,5 +86,5 @@ header.sticky {
 }
 
 .content_container {
-  padding-top: 190px;
+  padding-top: 150px;
 }

@@ -1,11 +1,47 @@
+
+//wait for the page to be ready
 $(document).ready(function(){
-    // Set the interval to be 5 seconds
-    var t = setInterval(function(){
-        $("#carousel ul").animate({marginLeft:-480},1000,function(){
-            $(this).find("li:last").after($(this).find("li:first"));
-            $(this).css({marginLeft:0});
-        })
-    },5000);
+
+  //create an array of images from the 'images' folder
+  var imagePath = '/assets/';
+  var images = ['fish.jpg', 'elephant.jpg', 'giraffe.jpg', 'penguins.jpg'];
+
+  // create the .slideshow-nav container
+  // could also do $(element1).after(element2) --> reversed
+  $('<div class="slideshow-nav"></div>').insertAfter('.slideshow-container');
+
+  //loop through the images and add to the empty container on the page
+  $.each(images, function(index, value){
+    $('<img src="' + imagePath + value + '">').appendTo('.slideshow-images');
+    $('<a href="#"></a>').appendTo('.slideshow-nav');
+  });
+
+  //fade the images in
+  $('.slideshow-images img').animate({opacity: 1}, 3000);
+
+  //watch for clicks on the slideshow nav
+  var imageWidth = $('.slideshow-container').width();
+  $('.slideshow-nav a').on('click', function(){
+    var index = $(this).index();
+    $('.slideshow-images').animate({
+      'margin-left': -index * imageWidth
+    }, 750);
+    $(this).addClass('is-active').siblings().removeClass('is-active');
+  });
+
+  //auto advance the slideshow
+  var currentSlide = 0;
+  setInterval(function(){
+    //trigger a click on the first nav item
+    //trigger a click on the next nav item
+    //trigger a click on the last nav item
+    //trigger a click on the first nav item
+    if (currentSlide >= images.length){
+      currentSlide = 0;
+    }
+    $('.slideshow-nav a').eq(currentSlide++).trigger('click')
+  }, 3000)
+
 });
 
 $('.slot').jSlots({

@@ -1,35 +1,73 @@
-body { 
+
+
+body.welcome { 
   font-family: Arial, Verdana, sans-serif;
   line-height:1.4;
   text-align: center;
   padding:0;
 }
 
-#carousel {
-    width: 480px;
-    overflow:hidden;
-    margin: 0 auto;
-  }
-
-#carousel ul {
-  width: 1920px;
-  padding: 0;
-  margin: 0;
+.slideshow {
+  background-color: blue;
+  height: 500px;
 }
 
-#carousel ul li {
+/* slideshow components */
+.slideshow-container {
+  position:relative;
+  padding-top: 80px;
+
   width:480px;
-  text-align: center;
-  height: 280px;
-  list-style: none;
-  float:  left;
+  height:280px;
+  margin:2em auto;
+
+  overflow:hidden;
 }
 
-ul {
+/* the container for all the images */
+.slideshow-images {
+  width:2700px;
+}
+.slideshow-images img {
+  position:relative;
+  float:left;
+  opacity:0;  /*initial state*/ 
+}
+
+
+/* slideshow navigation and pager */
+.slideshow-nav {
+  text-align:center;
+}
+.slideshow-nav a {
+  display:inline-block;
+  width:1em;
+  height:1em;
+  margin:0 0.25em;
+
+  background:#fff;
+  border:1px solid #666;
+  border-radius:100%;
+  -webkit-transition:0.3s;
+          transition:0.3s;
+}
+.slideshow-nav a:hover {
+  background:#ccc;
+}
+.slideshow-nav .is-active {
+  background:#999;
+}
+
+.slotdiv {
+  background-color:red;
+  height: 500px;
+}
+
+.nav ul {
   padding:0px;
   margin:0px;
 }
-li {
+.nav li {
   padding:0px;
   margin:0px;
 }
@@ -39,26 +77,22 @@ div#container {
   overflow:hidden;
 }
 
-h6 {
-  padding-top: 75px;
-  color:#FCC542;
-}
-
 
 
 input#playBtn {
-  clear: both;
-  float:center;
-  right:-70%;
-  height:30px;
-  padding-bottom: 30px;
+  display: block;
+  font-size:20px;
+  margin-bottom: 5px;
+  margin: 0 auto;
+}
+
+input#newBtn {
   font-size:20px;
 }
 
 div#button {
-  float:left;
-  right:16%;
-  position:relative;
+  float:right;
+  padding-right: 660px;
 }
 
 
@@ -70,8 +104,7 @@ div.nav {
   position:relative;
   list-style:none;
   font-weight: bold;
-  color: #FCC542;
-  text-shadow: 3px 3px #ff0000;
+
 }
 
 
@@ -92,7 +125,7 @@ div.nav {
      }
 
 div.slotHole {
-    border: 15px solid grey;
+    border: 1px solid grey;
     border-style:ridge;
   
 }  
@@ -101,7 +134,6 @@ div.slotHole {
   height: 100px;
   text-align: center;
   list-style: none;
-  color: #FCC542;
   padding-top: 20px;
   font-size: 20px;
 }
@@ -111,8 +143,6 @@ div.slotHole {
   list-style:none;
   margin:0;
   font-weight: bold;
-  color: #FCC542;
-  text-shadow: 3px 3px #ff0000;
 }
 
 input#form {
@@ -122,12 +152,11 @@ input#form {
   font-size: 20px;
 }
 
-p {
-  color: #FCC542;
+p.slot {
   font-size: 24px;
   list-style:none;
   margin:0;
-  font-weight: bold;
+  /*font-weight: bold;
   color: #FCC542;
-  text-shadow: 3px 3px #ff0000;
+  text-shadow: 3px 3px #ff0000;*/
 }

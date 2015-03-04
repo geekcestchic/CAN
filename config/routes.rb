@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   post '/rate' => 'rater#create', :as => 'rate'
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  devise_for :users
+  devise_for :users, :controllers => {:omniauth_callbacks => "callbacks"}
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -15,10 +15,12 @@ Rails.application.routes.draw do
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
-    resources :projects
-    resources :categories
+    resources :projects do
+      resources :ratings
+      resources :comments
+    end
+    resources :categories 
     resources :comments
-    resources :ratings
     resources :brands
     resources :users do
       member do

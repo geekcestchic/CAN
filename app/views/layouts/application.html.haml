@@ -3,28 +3,35 @@
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     %title Can
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
-    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = stylesheet_link_tag    'application', media: 'all'
+    = javascript_include_tag 'application'
+    %script{:charset => "utf-8", :src => "/assets/jquery.easing.1.3.js"}
+    %script{:charset => "utf-8", :src => "/assets/jquery.jSlots.js"}
+    %link{:rel => "stylesheet", :href => "http://fonts.googleapis.com/css?family=News+Cycle"}/
     = csrf_meta_tags
   %body
-    %p.notice= notice
-    %p.alert= alert
-    .login
+    %header
+      %input{placeholder: "Search", type: "text"}
+      %h1 YOUCAN
+      %p.notice= notice
+      %p.alert= alert
       - if user_signed_in?
-        = current_user.email
-        = link_to "Log out", destroy_user_session_path, method: :delete
+        %ul
+          %li
+            %a{href: "/projects"} Ideas
+          %li
+            %a{href: "/projects/new"} Create An Idea
+          %li
+            %a{href: "/users/:id"} My Profile
+          %li
+            %a= link_to('Log Out', destroy_user_session_path, method: :delete)
       - else
-        = link_to "Sign In", new_user_session_path
-        = link_to "Register", new_user_registration_path
-    / %header
-    /   %input{placeholder: "Search", type: "text"}
-    /     %ul
-    /       %li
-    /         %a{href: ""} Ideas
-    /       %li
-    /         %a{href: ""} Create An Idea
-    /       %li
-    /         %a{href: ""} My Profile
-    /     %h1 Sticky Header
+        %ul
+          %li
+            %a{href: "/projects"} Ideas
+          %li
+            %a{href: "#{new_user_session_path}"} Sign In
+          %li
+            %a{href: "#{new_user_registration_path}"} Register
+    .content_container    
     = yield
-
