@@ -26,6 +26,15 @@ a{
   color:black;
 }
 
+body{
+  padding:0;
+  margin:0;
+}
+html{
+  margin:0;
+  padding:0;
+}
+
 header{
   position: fixed;
   z-index:2;

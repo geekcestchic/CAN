@@ -11,7 +11,7 @@ function addToPage(project){
   // console.log(project)
   $('<li class="project"><h2><a href="/projects/'
     + project.id +'">'+project.title+
-    '</a></h2> | <p>'+project.content+'</p></li>')
+    '</a></h2><p>'+project.content+'</p></li>')
   .prependTo("#projects")
 }
 
