@@ -22,8 +22,9 @@
     .done(function(data){
       // console.log(data)
       $.each(data, function(index,comment){
-        prependToPage(comment)
-        // console.log('does this work?')
+        if (comment.project_id === projectId) {
+          prependToPage(comment)
+        }
       });
     });
   }

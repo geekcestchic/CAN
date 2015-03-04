@@ -19,7 +19,7 @@
     %input#comment-box{ data: {project_id: @project.id }, placeholder: "Comment on this project!", title: "Press Enter to Submit" }
   - else 
     .message You must be signed in to comment
-  %ul#comments
+  %ul#comments{data:{projectid:params[:id]}}
   
 
   = link_to 'Know a similar Project?', projects_similars_path(@project)
