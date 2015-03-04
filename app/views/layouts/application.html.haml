@@ -22,7 +22,7 @@
           %li
             %a{href: "/projects/new"} Create An Idea
           %li
-            %a{href: "/users/:id"} My Profile
+            = link_to 'Profile', user_path(current_user)
           %li
             %a= link_to('Log Out', destroy_user_session_path, method: :delete)
       - else
