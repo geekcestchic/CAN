@@ -12,7 +12,8 @@
   %body
     %header
       %input{placeholder: "Search", type: "text"}
-      %h1 YOUCAN
+      %h1
+        = link_to('YOUCAN', "/")
       %p.notice= notice
       %p.alert= alert
       - if user_signed_in?
