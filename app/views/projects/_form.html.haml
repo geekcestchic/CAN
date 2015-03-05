@@ -3,7 +3,11 @@
 
   = simple_form_for @project do |f|
     %p= f.input :title
+    %p= f.file_field :image
     %p= f.input :content
+    %p= f.input :video
     %p= f.association :categories, as: :check_boxes
     %p= f.association :brands, as: :check_boxes
     %p= f.submit 'Share your idea with the world!'
+
+

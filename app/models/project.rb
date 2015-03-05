@@ -1,4 +1,6 @@
 class Project < ActiveRecord::Base
+
+  mount_uploader :image, ProjectImageUploader
   
   has_many :comments
   has_many :ratings
