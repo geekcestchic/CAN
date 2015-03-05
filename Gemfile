@@ -24,7 +24,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'rails_12factor', group: :production
 gem 'thin'
-
+gem 'faker'
 
 group :development, :test do
   gem 'byebug'
@@ -32,6 +32,5 @@ group :development, :test do
   gem 'pry-byebug'
   gem 'web-console', '~> 2.0'
   gem 'spring'
-  gem 'faker'
 end
 
