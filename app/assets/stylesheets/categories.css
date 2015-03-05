@@ -14,7 +14,7 @@
 }
 
 .category { 
-  background-color: yellow;
+  background-color: black;
   width: 50%;
   width: 200px;
   height: 90px;
@@ -27,4 +27,5 @@
 
 .categories a {
   line-height: 100px;
+  color: white;
 }

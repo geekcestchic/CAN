@@ -13,7 +13,8 @@
   %body
     %header.animated-nav
       %input{placeholder: "Search", type: "text"}
-      %h1= link_to 'uCAN', "/"
+      %h1
+        = link_to('uCAN', "/")
       %p.notice= notice
       %p.alert= alert
       - if user_signed_in?
