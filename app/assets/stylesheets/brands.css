@@ -13,7 +13,7 @@
 }
 
 .brand { 
-    background-color: yellow;
+    background-color: black;
     width: 50%;
     width: 200px;
     height: 100px;
@@ -26,4 +26,5 @@
 
 .brands a {
   line-height: 100px;
+  color: white;
 }

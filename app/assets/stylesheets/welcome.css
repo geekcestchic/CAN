@@ -8,7 +8,7 @@ body.welcome {
 }
 
 .slideshow {
-  background-color: blue;
+  background-color: white;
   height: 500px;
 }
 
@@ -59,7 +59,7 @@ body.welcome {
 }
 
 .slotdiv {
-  background-color:red;
+  background-color:darkgrey;
   height: 500px;
 }
 
@@ -92,14 +92,14 @@ input#newBtn {
 
 div#button {
   float:right;
-  padding-right: 660px;
+  padding-right: 650px;
 }
 
 
 div.nav {
-  width:210px;
+  width:200px;
   font-size: 20px;
-  margin: 30px;
+  margin: 40px;
   float: left;
   position:relative;
   list-style:none;
