@@ -59,6 +59,7 @@ function addToNav(images,titles,ids){
   //fade the images in
   $('.slideshow-images img').animate({opacity: 1}, 3000);
 
+
   //watch for clicks on the slideshow nav
   var imageWidth = $('.slideshow-container').width();
   $('.slideshow-nav a').on('click', function(){
@@ -89,6 +90,9 @@ function addToNav(images,titles,ids){
 
 $(function(){ 
   getSlideShow();
+
+  //assign image width
+  $('.slideshow-images img').width($(window).width() * 0.7);
 });
 
 

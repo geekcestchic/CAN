@@ -1,4 +1,4 @@
-$slideshow-width: 600px;
+$slideshow-width: 70%;
 $slideshow-height: 500px;
 
 body.welcome { 
@@ -25,7 +25,7 @@ body.welcome {
 
 .project-links{
   float:right;
-  width: $slideshow-width/3;
+  width: 30%;
   height: $slideshow-height;
   margin:0;
   background:black;
