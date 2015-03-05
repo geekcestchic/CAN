@@ -2,7 +2,6 @@
   = image_tag @user.avatar, class: 'image'
 
 .user
-  
   %h1 My name is #{@user.firstname} #{@user.lastname}
   = render 'users/stats'
   = render 'follow_form' if user_signed_in?
