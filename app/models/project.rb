@@ -6,6 +6,7 @@ class Project < ActiveRecord::Base
   has_many :ratings
   has_and_belongs_to_many :categories
   has_and_belongs_to_many :brands
+  belongs_to :user
 
   # self association (to assign projects that are similar to each other)
   has_many :similarities, foreign_key: "similar_id", dependent: :destroy

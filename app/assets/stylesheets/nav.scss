@@ -1,12 +1,13 @@
 header.animated-nav{
+  z-index:1;
   position: fixed;
   z-index:2;
   top:0;
   width: 100%;
   text-align: center;
-  font-size: 50px;
+  font-size: 30px;
   line-height: 8px;
-  height: 120px;
+  height: 75px;
   background: black;
   color: #fff;
   font-family: 'PT Sans', sans-serif;
@@ -54,12 +55,28 @@ header.sticky {
   font-size: 20px;
   height: 50px;
   background: darkgrey;
+  height: 52px;
   text-align: left;
   padding-left: 20px;
   transition: all 0.2s ease;
 }
 
 .content_container {
-  padding-top: 120px;
+  padding-top: 100px;
   
 }
+.footer{
+  margin:0;
+  padding: 10px;
+  text-align: center;
+  background: black;
+  clear:both;
+  // margin-top: 40px;
+  a{
+    margin: 0 30px;
+    color:white;
+  }
+  a:hover{
+    text-decoration: underline;
+  }
+}  

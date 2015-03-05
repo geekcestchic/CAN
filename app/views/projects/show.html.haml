@@ -1,9 +1,17 @@
 .project-page
-  %h1= @project.title
-  = image_tag @project.image.project_show.url, class: 'image'
+
+  .project-header
+    %h1= @project.title.upcase
+    = image_tag 'lightbulb.svg',class: 'image'
+    = image_tag(@project.image.project_show.url, class: 'project-image')
+    %p By <i>#{@project.user.firstname} #{@project.user.lastname}</i>
+    #categories
+      - @project.categories.each do |category|
+        .category-thumbnail= link_to '#'+category.name, category_path(category)
+  
   - if @project.video?
     %iframe{:height => "315", :src => "http://www.youtube.com/embed/#{@project.video}", :width => "400"}
-  .brilliancs
+
   %p= @project.content
   .rating
     .rating-box
@@ -23,13 +31,11 @@
     .message You must be signed in to comment
   %ul#comments{data:{projectid:params[:id]}}
   
-
-  = link_to 'Know a similar Project?', projects_similars_path(@project)
-
   #similars
-    %P Similar Projects
+    = link_to 'Know a similar Project?', projects_similars_path(@project)
+    %p Similar Projects
     - @project.similar_projects.each do |project|
-      = link_to project.title, project_path(project), class: 'link'
+      .similar= link_to project.title, project_path(project)
 
 .footer
   - if user_signed_in?

@@ -6,6 +6,16 @@
   img{
     height:30px;
   }
+  h1{
+    background:lightgrey;
+    margin: -40px -40px 30px -40px;
+    z-index:-1;
+    padding:70px;
+    color:white;
+    font-size: 75px;
+    background: url('lb-bg.jpg');
+    background-size: 100%;
+  }
 
   #projects{
     border-top:solid 1px black;
@@ -30,7 +40,7 @@
       list-style-type: none;
     }
     .project:hover{
-      background:#C34B71;
+      background:lightgrey;
       color:white
       a{
         color:white;
@@ -44,30 +54,66 @@
 
 .project-page{
   padding:20px;
-  .image{
-    height:45px;
-  }
-  h1{
-    text-align:center;
-    margin:30px auto;
-    background:black;
+
+  .project-header{
+    z-index:-1;
+    background:lightgrey;
+    width:100%;
     color:white;
-    border-radius:5px;
-    padding:3px;
-    display:inline-block;
+    height: 210px;
+    margin:-20px;
+    margin-bottom: 30px;
+    padding:20px;
+    .image{
+      height:65px;
+      display:inline-block;
+      margin-left: 50px;
+    }
+    h1{
+      display:inline-block;
+    }
+    .project-image{
+      position:absolute;
+      top: 75px;
+      right:0;
+      height: 250px;
+    }
+    #categories{
+      position:relative;
+      top: 30px;
+      width: 60%;
+      .category-thumbnail{
+        display: inline-block;
+        text-align:center;
+        background:black;
+        float:left;
+        margin:0 10px;
+        border-radius:3px;
+        padding:3px 10px;
+        a{
+          color:white;
+
+        }
+      }
+    }
   }
   #comment-box{
     width:50%;
     height:80px;
     padding:10px;
     font-size:15px;
+    float:left;
   }
   ul{
+    width: 50%;
+    float:left;
     padding:0;
+    // border:blue solid 1px;
+
     li{
       list-style-type: none;
-      border-top: dotted black 1px;
-      
+      display:block;
+      border-top: dotted black 1px;    
     }
   }
   .small{
@@ -82,7 +128,19 @@
     text-align: center;
     border-radius:5px;
   }
-  
+  #similars{
+    padding:10px;
+    width: 30%;
+    // border: black 1px dotted;
+    float:right;
+    margin-bottom: 40px;
+  }
+}
+iframe{
+  border:none;
+  float:right;
+  margin-left: 20px;
+  margin-bottom: 20px;
 }
 
 
@@ -92,13 +150,14 @@
   padding:25px;
   margin:0;
   #form{
-    background:darkgrey;
+    background:black;
     opacity:0.8;
     max-width: 500px;
-    color:black;
+    color:white;
     margin: 20px auto;
     text-align:center;
     padding: 20px;
+    border-radius:4px;
     #input{
       width: 340px;
       background:lightgrey;
@@ -126,19 +185,5 @@
       background:black;
       color:white
     }
-
   }
-  .footer{
-    margin:0;
-    padding: 10px;
-    text-align: center;
-    background: black;
-    a{
-      margin: 0 30px;
-      color:white;
-    }
-    a:hover{
-      text-decoration: underline;
-    }
-  }  
 }

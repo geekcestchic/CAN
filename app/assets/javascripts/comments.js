@@ -22,6 +22,7 @@
     .done(function(data){
       // console.log(data)
       $.each(data, function(index,comment){
+        console.log(comment.project_id);
         if (comment.project_id === projectId) {
           prependToPage(comment)
         }

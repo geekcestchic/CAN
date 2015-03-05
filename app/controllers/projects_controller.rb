@@ -13,11 +13,12 @@ class ProjectsController < ApplicationController
 
   def new
     @project = Project.new
-    @project.user_id = current_user.id
   end
 
   def create
-    @project = Project.create project_params
+
+    @project = Project.new project_params
+    @project.user_id = current_user.id
     if @project.video
       @project.video = @project.video.sub(/.*?=/, '')
       @project.save
@@ -30,6 +31,10 @@ class ProjectsController < ApplicationController
     # redirect_to project_path(@project) if @project.update
     # else render project_similar(@project)
     # render json: @project, status: :created
+  end
+
+  def edit
+    @project = Project.find(params[:id])
   end
 
   def update
