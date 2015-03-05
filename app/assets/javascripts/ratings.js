@@ -64,7 +64,7 @@ function submitRating(){
   var projectId = $('#comment-box').data('project-id');
   var rating = $(this).context.dataset.rating;
 
-  request("POST", "/projects/" + projectId + "/ratings", 
+  request("POST","/ratings", 
     { rating: { 
       value: rating, project_id: projectId
     }
