@@ -1,7 +1,11 @@
 .project-page
   %h1= @project.title
   = image_tag 'lightbulb.svg',class: 'image'
-  .brilliancs
+  #categories
+    - @project.categories.each do |category|
+      .category-thumbnail= link_to '#'+category.name, category_path(category)
+  .brilliance
+  %br/
   %p= @project.content
   .rating
     .rating-box
@@ -21,13 +25,11 @@
     .message You must be signed in to comment
   %ul#comments{data:{projectid:params[:id]}}
   
-
-  = link_to 'Know a similar Project?', projects_similars_path(@project)
-
   #similars
-    %P Similar Projects
+    = link_to 'Know a similar Project?', projects_similars_path(@project)
+    %p Similar Projects
     - @project.similar_projects.each do |project|
-      = link_to project.title, project_path(project), class: 'link'
+      .similar= link_to project.title, project_path(project)
 
 .footer
   - if user_signed_in?

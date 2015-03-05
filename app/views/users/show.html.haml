@@ -12,8 +12,9 @@
 
 
 #user-projects{data:{userid:params[:id]}}
-
-
-
-.user-footer
-  =link_to(image_tag('lightbulb.svg', class:'image', title:'INSPIRED???'), new_project_path)
+  - if @user.projects.blank?
+    %p This user currently has no idea :-(
+    %p= link_to 'You have one?', new_project_path
+  - else
+    .user-footer
+      =link_to(image_tag('lightbulb.svg', class:'image', title:'INSPIRED???'), new_project_path)
