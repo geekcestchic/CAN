@@ -94,7 +94,7 @@ $('.slot5').jSlots({
 $(function(){
   $('#newBtn').on('click', function(){
     location = "/projects/new"
-    $(@project)content.val("Your idea is a mix of" + onEnd);
+    // $(@project)content.val("Your idea is a mix of" + onEnd);
   },
 
 
