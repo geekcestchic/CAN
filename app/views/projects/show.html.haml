@@ -1,6 +1,8 @@
 .project-page
   %h1= @project.title
   = image_tag @project.image.project_show.url, class: 'image'
+  - if @project.video?
+    %iframe{:height => "315", :src => "http://www.youtube.com/embed/#{@project.video}", :width => "400"}
   .brilliancs
   %p= @project.content
   .rating

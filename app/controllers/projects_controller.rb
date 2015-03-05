@@ -18,6 +18,10 @@ class ProjectsController < ApplicationController
 
   def create
     @project = Project.create project_params
+    if @project.video
+      @project.video = @project.video.sub(/.*?=/, '')
+      @project.save
+    end
     redirect_to projects_path
   end
 

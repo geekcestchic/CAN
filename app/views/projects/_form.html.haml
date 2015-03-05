@@ -10,6 +10,7 @@
 
       %p= f.text_field :title, placeholder: "What's it called?", id: "input"
       %p= f.file_field :image
+      %p= f.text_field :video
       %p= f.text_area :content, placeholder: "Tell us a bit more!", id: "input"
       %p= f.association :categories, as: :check_boxes, label:"Pick categories it falls under"
       %p= f.association :brands, as: :check_boxes, label: "Pick famous brands your project would ressemble"
