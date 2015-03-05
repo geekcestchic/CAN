@@ -1,5 +1,7 @@
-USERS
+.users
+  %h1USERS
 
-- @users.each do |user|
-  = link_to (image_tag user.avatar, width: 200, class: 'image'), user
-  = (user.firstname)
+  - @users.each do |user|
+    .user-box
+      = link_to (image_tag user.avatar, width: 200, class: 'image'), user
+      %p= user.firstname

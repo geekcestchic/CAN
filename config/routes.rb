@@ -23,6 +23,7 @@ Rails.application.routes.draw do
     resources :comments
     resources :brands
     resources :users do
+      resources :projects
       member do
         get :following, :followers
       end

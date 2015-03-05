@@ -1,0 +1,68 @@
+//index users page
+.user-box{
+  width: 30%;
+  display: inline-block;
+  text-align:center;
+  border:solid 5px black;
+  margin:5px;
+  border-radius:10px;
+  .image{
+    border-radius:200px;
+  }
+  p{
+    background:black;
+    color:white;
+    padding:10px;
+  }
+}
+
+
+//show page
+.user-header{
+  margin:0;
+  padding: 30px;
+  background:black;
+  background-image: url('robot.jpg');
+  .image{
+  background:black;
+  border-radius: 200px;
+  border:solid white 5px;
+  margin-top:50px;
+  }
+}
+.user{
+  width: 30%;
+  float:left;
+  padding: 20px;
+  input{
+    background:black;
+    border:none;
+    color:white;
+    padding:10px;
+    margin:10px 0;
+  }
+  
+}
+#user-projects{
+  background:black;
+  padding:20px;
+  color:white;
+  width: 55%;
+  float: right;
+  border: 1px dotted black;
+  margin: 0px;
+  a{
+    color:white;
+  }
+  li{
+    text-decoration:none;
+  }
+}
+.user-footer{
+  float:right;
+  break:right;
+  margin: 20px 220px;
+  .image{
+    height:150px;
+  }
+}

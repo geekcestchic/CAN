@@ -1,55 +1,34 @@
+// This is a manifest file that'll be compiled into application.js, which will include all the files
+// listed below.
+//
+// Any JavaScript/Coffee file within this directory, lib/assets/javascripts, vendor/assets/javascripts,
+// or any plugin's vendor/assets/javascripts directory can be referenced here using a relative path.
+//
+// It's not advisable to add code directly here, but if you do, it'll appear at the bottom of the
+// compiled file.
+//
+// Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
+// about supported directives.
+//
 
-$(document).ready(function(){
 
-  //create an array of images from the 'images' folder
-  var imagePath = '/assets/';
-  var images = ['fish.jpg', 'elephant.jpg', 'giraffe.jpg', 'penguins.jpg'];
+// require turbolinks
 
-  // create the .slideshow-nav container
-  // could also do $(element1).after(element2) --> reversed
-  $('<div class="slideshow-nav"></div>').insertAfter('.slideshow-container');
 
-  //loop through the images and add to the empty container on the page
-  $.each(images, function(index, value){
-    $('<img src="' + imagePath + value + '">').appendTo('.slideshow-images');
-    $('<a href="#"></a>').appendTo('.slideshow-nav');
-  });
 
-  //fade the images in
-  $('.slideshow-images img').animate({opacity: 1}, 3000);
-
-  //watch for clicks on the slideshow nav
-  var imageWidth = $('.slideshow-container').width();
-  $('.slideshow-nav a').on('click', function(){
-    var index = $(this).index();
-    $('.slideshow-images').animate({
-      'margin-left': -index * imageWidth
-    }, 750);
-    $("currentSlide").wrap("<a href='/projects/new'></a>");
-    $(this).addClass('is-active').siblings().removeClass('is-active');
-  });
-
-  //auto advance the slideshow
-  var currentSlide = 0;
-  setInterval(function(){
-    //trigger a click on the first nav item
-    //trigger a click on the next nav item
-    //trigger a click on the last nav item
-    //trigger a click on the first nav item
-    if (currentSlide >= images.length){
-      currentSlide = 0;
-    }
-    $('.slideshow-nav a').eq(currentSlide++).trigger('click')
-  }, 3000)
-
+$(window).scroll(function() {
+if ($(this).scrollTop() > 1){  
+    $('header').addClass("sticky");
+  }
+  else{
+    $('header').removeClass("sticky");
+  }
 });
 
 $('.slot').jSlots({
 spinner : '#playBtn',
 winnerNumber : 7
 });
-
-
 
 $(function() {
 
@@ -90,14 +69,6 @@ $('.slot5').jSlots({
     spinner : '#playBtn',  
     winnerNumber : 7  
 }); 
-
-$(function(){
-  $('#newBtn').on('click', function(){
-    location = "/projects/new"
-    $(@project)content.val("Your idea is a mix of" + onEnd);
-  },
-
-
 
 function onFormSubmit(event) {
     event.preventDefault();
