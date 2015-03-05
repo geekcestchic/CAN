@@ -1,11 +1,13 @@
 .project-page
-  %h1= @project.title
-  = image_tag 'lightbulb.svg',class: 'image'
-  #categories
-    - @project.categories.each do |category|
-      .category-thumbnail= link_to '#'+category.name, category_path(category)
-  .brilliance
-  %br/
+  .project-header
+    %h1= @project.title
+    = image_tag 'lightbulb.svg',class: 'image'
+    = image_tag(@project.image.project_show.url, class: 'project-image')
+    %p= @project.user_id
+    #categories
+      - @project.categories.each do |category|
+        .category-thumbnail= link_to '#'+category.name, category_path(category)
+  
   %p= @project.content
   .rating
     .rating-box

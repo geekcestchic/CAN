@@ -1,5 +1,5 @@
 .user-header
-  = image_tag @user.avatar, class: 'image'
+  = image_tag @user.avatar.avatar_show.url, class: 'image'
 
 .user
   %h1 My name is #{@user.firstname} #{@user.lastname}
@@ -8,7 +8,6 @@
   %h2 I live in #{@user.location}
   %p= @user.bio
   = link_to 'Edit My Profile', edit_user_registration_path(current_user) 
-
 
 #user-projects{data:{userid:params[:id]}}
   - if @user.projects.blank?

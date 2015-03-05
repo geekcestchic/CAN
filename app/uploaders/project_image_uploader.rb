@@ -1,6 +1,6 @@
 # encoding: utf-8
 
-class AvatarUploader < CarrierWave::Uploader::Base
+class ProjectImageUploader < CarrierWave::Uploader::Base
 
   # Include RMagick or MiniMagick support:
   include CarrierWave::RMagick
@@ -32,12 +32,12 @@ class AvatarUploader < CarrierWave::Uploader::Base
   # end
 
   # Create different versions of your uploaded files:
-  
-  version :avatar_show do
+
+  version :project_show do
     process :resize_to_fit => [300, 300]
   end
 
-  version :avatar_index do
+  version :project_index do
     process :resize_to_fit => [50, 50]
   end
 

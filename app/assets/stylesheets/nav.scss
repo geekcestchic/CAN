@@ -1,4 +1,5 @@
 header.animated-nav{
+  z-index:1;
   position: fixed;
   z-index:2;
   top:0;
@@ -53,7 +54,6 @@ header.animated-nav{
 header.sticky {
   font-size: 20px;
   height: 50px;
-  background: lightgrey;
   text-align: left;
   padding-left: 20px;
   transition: all 0.2s ease;
