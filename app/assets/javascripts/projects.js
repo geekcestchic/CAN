@@ -8,15 +8,25 @@ function request(method, url, data){
 }
 
 function addToPage(project){
-  // console.log(project)
   var content = project.content
-  if(content.length > 10) content = content.substring(0,100) + '...'
+  if(content.length > 100) content = content.substring(0,100) + '...'
   var title = project.title
-  if(title.length > 10) title = title.substring(0,20) + '...'
+  if(title.length > 20) title = title.substring(0,20) + '...'
   $('<li class="project"><h2><a href="/projects/'
     + project.id +'">'+title+
     '</a></h2><p>'+content+'</p></li>')
   .prependTo(".container#projects")
+}
+
+function addToUserPage(project){
+  var content = project.content
+  if(content.length > 100) content = content.substring(0,100) + '...'
+  var title = project.title
+  if(title.length > 30) title = title.substring(0,30) + '...'
+  $('<li class="project"><h2><a href="/projects/'
+    + project.id +'">'+title+
+    '</a></h2><p>'+content+'</p></li>')
+  .appendTo("#user-projects")
 }
 
 function getProjects(){
@@ -29,12 +39,12 @@ function getProjects(){
 
 function getCurrentUserProjects(){
   var userId = $('#user-projects').data('userid');
-  console.log(userId); 
+  // console.log(userId); 
   request("GET","/projects", null).done(function(data){
     $.each(data, function(index,project){
       //the crucial bit, filtering out only the ones from current user
       if (project.user_id === userId) {
-        addToPage(project)
+        addToUserPage(project)
       }
     });
   });

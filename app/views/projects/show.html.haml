@@ -1,9 +1,9 @@
 .project-page
   .project-header
-    %h1= @project.title
+    %h1= @project.title.upcase
     = image_tag 'lightbulb.svg',class: 'image'
     = image_tag(@project.image.project_show.url, class: 'project-image')
-    %p= @project.user_id
+    %p <i>#{@project.user.firstname} #{@project.user.lastname}</i> came up with this.
     #categories
       - @project.categories.each do |category|
         .category-thumbnail= link_to '#'+category.name, category_path(category)

@@ -13,11 +13,12 @@ class ProjectsController < ApplicationController
 
   def new
     @project = Project.new
-    @project.user_id = current_user.id
   end
 
   def create
-    @project = Project.create project_params
+    @project = Project.new project_params
+    @project.user_id = current_user.id
+    @project.save
     redirect_to projects_path
   end
 
