@@ -45,15 +45,13 @@ $(document).ready(function(){
 });
 
 $('.slot').jSlots({
-spinner : '#playBtn',
-winnerNumber : 7
+  spinner : '#playBtn',
+  winnerNumber : 7
 });
-
-
 
 $(function() {
 
-$.jSlots.defaultOptions = {  
+  $.jSlots.defaultOptions = {  
     number : 2,          // Number: number of slots  
     winnerNumber : 1,    // Number: list item number upon which to trigger a win, 1-based index, NOT ZERO-BASED  
     spinner : '',        // CSS Selector: element to bind the start event to  
@@ -64,56 +62,55 @@ $.jSlots.defaultOptions = {
     easing : 'swing',    // String: easing type for final spin. I recommend the easing plugin and easeOutSine, or an easeOut of your choice.  
     time : 7000,         // Number: total time of spin animation  
     loops : 6            // Number: times it will spin during the animation  
-};  
+  };  
 
-$('.slot1').jSlots({  
+  $('.slot1').jSlots({  
     spinner : '#playBtn',  
     winnerNumber : 7  
-}); 
+  }); 
 
-$('.slot2').jSlots({  
+  $('.slot2').jSlots({  
     spinner : '#playBtn',  
     winnerNumber : 7  
-}); 
+  }); 
 
-$('.slot3').jSlots({  
+  $('.slot3').jSlots({  
     spinner : '#playBtn',  
     winnerNumber : 7  
-}); 
+  }); 
 
-$('.slot4').jSlots({  
+  $('.slot4').jSlots({  
     spinner : '#playBtn',  
     winnerNumber : 7  
-}); 
+  }); 
 
-$('.slot5').jSlots({  
+  $('.slot5').jSlots({  
     spinner : '#playBtn',  
     winnerNumber : 7  
-}); 
+  }); 
 
-$(function(){
-  $('#newBtn').on('click', function(){
-    location = "/projects/new"
-    // $(@project)content.val("Your idea is a mix of" + onEnd);
-  },
-
-
-
-function onFormSubmit(event) {
+  function onFormSubmit(event) {
     event.preventDefault();
 
     if(event.keyCode != 13) {
-        return;
+      return;
     }
 
     var $this = $(this);
 
     $this.closest('.nav')
-         .find('ul')
-         .prepend('<li>'+$this.val()+'</li>');
+     .find('ul')
+     .prepend('<li>'+$this.val()+'</li>');
 
     $this.val('');
-}
+  }
 
-$('input').keyup(onFormSubmit);
+  $('input').keyup(onFormSubmit);
+});
+
+$(function(){
+  $('#newBtn').on('click', function(){
+    location = "/projects/new"
+    // $(@project)content.val("Your idea is a mix of" + onEnd);
+  });
 });
