@@ -1,0 +1,114 @@
+
+.slotdiv {
+  background-color:lightgrey;
+  height: 500px;
+  padding: 20px;
+  text-align:center;
+  background:url('casino.jpg');
+  background-size:100%;
+}
+
+.nav ul {
+  padding:0px;
+  margin:0px;
+}
+.nav li {
+  padding:0px;
+  margin:0px;
+}
+div#container { 
+  width: 100%;
+  margin: 0 auto;
+  overflow:hidden;
+}
+
+
+
+#newBtn {
+  background:white;
+  padding:5px;
+  border:none;
+  font-size:15px;
+  margin:20px;
+}
+#playBtn {
+  background:white;
+  padding:5px;
+  border:none;
+  font-size:15px;
+  margin:20px;
+}
+
+
+div.nav {
+  width:150px;
+  font-size: 15px;
+  margin: 20px;
+  float: left;
+  position:relative;
+  list-style:none;
+  font-weight: bold;
+  background:#7A2A7E;
+  border-radius:3px;
+  opacity:0.8;
+}
+
+
+.jSlots-wrapper {  
+    overflow: hidden; /* to hide the magic */  
+    height: 20px; /* whatever the height of your list items are */  
+    display: inline-block; /* to size width correctly, can use float too, or width*/  
+    width: 100px;
+    height: 100px;
+    background:white;
+    border:none;
+    // background: rgb(2,5,2); /* Old browsers */
+  // background: -moz-linear-gradient(top, rgba(2,5,2,1) 0%, rgba(255,255,255,1) 12%, rgba(255,255,255,1) 33%, rgba(255,255,255,1) 67%, rgba(255,252,252,1) 88%, rgba(0,0,0,1) 100%); /* FF3.6+ */
+  // background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(2,5,2,1)), color-stop(12%,rgba(255,255,255,1)), color-stop(33%,rgba(255,255,255,1)), color-stop(67%,rgba(255,255,255,1)), color-stop(88%,rgba(255,252,252,1)), color-stop(100%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
+  // background: -webkit-linear-gradient(top, rgba(2,5,2,1) 0%,rgba(255,255,255,1) 12%,rgba(255,255,255,1) 33%,rgba(255,255,255,1) 67%,rgba(255,252,252,1) 88%,rgba(0,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
+  // background: -o-linear-gradient(top, rgba(2,5,2,1) 0%,rgba(255,255,255,1) 12%,rgba(255,255,255,1) 33%,rgba(255,255,255,1) 67%,rgba(255,252,252,1) 88%,rgba(0,0,0,1) 100%); /* Opera 11.10+ */
+  // background: -ms-linear-gradient(top, rgba(2,5,2,1) 0%,rgba(255,255,255,1) 12%,rgba(255,255,255,1) 33%,rgba(255,255,255,1) 67%,rgba(255,252,252,1) 88%,rgba(0,0,0,1) 100%); /* IE10+ */
+  // background: linear-gradient(to bottom, rgba(2,5,2,1) 0%,rgba(255,255,255,1) 12%,rgba(255,255,255,1) 33%,rgba(255,255,255,1) 67%,rgba(255,252,252,1) 88%,rgba(0,0,0,1) 100%); /* W3C */
+  // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#020502', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+     }
+
+div.slotHole {
+    border: none;
+    // border-style:ridge;
+  
+}  
+
+.jSlots-wrapper ul li {
+  height: 100px;
+  text-align: center;
+  list-style: none;
+  padding-top: 20px;
+  font-size: 15px;
+}
+
+.slot1 li, .slot2 li, .slot3 li, .slot4 li, .slot5 li {
+  font-size: 15px;
+  list-style:none;
+  margin:0;
+  // font-weight: bold;
+}
+
+input#form {
+  width: 90px;
+  height:35px;
+  margin:10px;
+  font-size: 15px;
+  padding:5px;
+  text-align:center;
+  border:none;
+}
+
+p.slot {
+  font-size: 15px;
+  list-style:none;
+  margin-bottom:10px;
+  color:white;
+  /*font-weight: bold;
+  color: #FCC542;
+  text-shadow: 3px 3px #ff0000;*/
+}
