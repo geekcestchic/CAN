@@ -16,9 +16,13 @@ class ProjectsController < ApplicationController
   end
 
   def create
+
     @project = Project.new project_params
     @project.user_id = current_user.id
-    @project.save
+    if @project.video
+      @project.video = @project.video.sub(/.*?=/, '')
+      @project.save
+    end
     redirect_to projects_path
   end
 

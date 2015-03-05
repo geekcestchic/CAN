@@ -9,6 +9,9 @@
       - @project.categories.each do |category|
         .category-thumbnail= link_to '#'+category.name, category_path(category)
   
+  - if @project.video?
+    %iframe{:height => "315", :src => "http://www.youtube.com/embed/#{@project.video}", :width => "400"}
+
   %p= @project.content
   .rating
     .rating-box
