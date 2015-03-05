@@ -1,9 +1,25 @@
+/////slideshow
 
-$(document).ready(function(){
+function request(method, url, data){
+  return $.ajax({
+    url: url,
+    method: method,
+    dataType: "json",
+    data: data
+  })
+}
 
+function getSlideShow(){
   //create an array of images from the 'images' folder
-  var imagePath = '/assets/';
-  var images = ['fish.jpg', 'elephant.jpg', 'giraffe.jpg', 'penguins.jpg'];
+  var images = []
+  request('GET','/projects', null).done(function(projects){
+    $.each(projects, function(index,project){
+      images.push(project.image.url)
+    });
+    console.log(images)
+  });
+  // var imagePath = '/assets/';
+  // var images = ['fish.jpg', 'elephant.jpg', 'giraffe.jpg', 'penguins.jpg'];
 
   // create the .slideshow-nav container
   // could also do $(element1).after(element2) --> reversed
@@ -41,8 +57,15 @@ $(document).ready(function(){
     }
     $('.slideshow-nav a').eq(currentSlide++).trigger('click')
   }, 3000)
+}
 
+$(document).ready(function(){ 
+  getSlideShow();
 });
+///
+///
+///
+////Slots carousel
 
 $('.slot').jSlots({
   spinner : '#playBtn',
