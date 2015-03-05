@@ -1,5 +1,7 @@
 .project-page
   %h1= @project.title
+  = image_tag 'lightbulb.svg',class: 'image'
+  .brilliancs
   %p= @project.content
   .rating
     .rating-box
@@ -10,22 +12,24 @@
       .star#five{data:{rating:5}}
     .notify
 
-    .average-rating
+    .average-rating{data:{rating:@project.average_rating}}
       %p= "Average rating: #{@project.average_rating}"
 
-  / - if user_signed_in?
-  %input#comment-box{ data: {project_id: @project.id }, placeholder: "Comment on this project!", title: "Press Enter to Submit" }
-  %ul#comments
-  / - else 
-  /   %p You must be signed in to comment
+  - if user_signed_in?
+    %input#comment-box{ data: {project_id: @project.id }, placeholder: "Comment on this project!", title: "Press Enter to Submit" }
+  - else 
+    .message You must be signed in to comment
+  %ul#comments{data:{projectid:params[:id]}}
+  
 
   = link_to 'Know a similar Project?', projects_similars_path(@project)
 
   #similars
     %P Similar Projects
     - @project.similar_projects.each do |project|
-      = project.title
+      = link_to project.title, project_path(project), class: 'link'
 
+.footer
   - if user_signed_in?
     - if @project.user_id = current_user.id
       = link_to 'Edit', edit_project_path(@project)
