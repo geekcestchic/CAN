@@ -203,7 +203,7 @@
                 });
 
                 if ( $.isFunction( base.options.onEnd ) ) {
-                    base.options.onEnd(finalNumbers);
+                    base.options.onEnd(finalNumbers, this);
                 }
 
                 if ( base.winCount && $.isFunction(base.options.onWin) ) {
