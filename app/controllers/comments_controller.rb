@@ -5,7 +5,9 @@ class CommentsController < ApplicationController
   end
 
   def create
-    @comment = Comment.create params.require(:comment).permit(:title, :content)
+    @comment = Comment.new params.require(:comment).permit(:title, :content)
+    @comment.project_id = params[:id]
+    @comment.save
     render json: @comment, status: :created
   end
 

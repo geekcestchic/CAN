@@ -61,7 +61,9 @@ function addToNav(images,titles,ids){
 
 
   //watch for clicks on the slideshow nav
-  var imageWidth = $('.slideshow-container').width();
+  var imageWidth = $(window).width() * 0.7
+  $('.slideshow-images img').width(imageWidth);
+  // var imageWidth = $('.slideshow-container').width();
   $('.slideshow-nav a').on('click', function(){
     var index = $(this).index();
     $('.slideshow-images').animate({'margin-left': -index * imageWidth}, 750);
@@ -92,7 +94,7 @@ $(function(){
   getSlideShow();
 
   //assign image width
-  $('.slideshow-images img').width($(window).width() * 0.7);
+
 });
 
 

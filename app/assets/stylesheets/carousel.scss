@@ -11,6 +11,12 @@ body.welcome {
 .slideshow {
   background-color: white;
   height: $slideshow-height;
+  h1{
+    background:lightgrey;
+    color:white;
+    margin:0;
+    padding:20px;
+  }
 }
 
 /* slideshow components */
@@ -57,8 +63,8 @@ body.welcome {
 .slideshow-nav {
   text-align:left;
   position: absolute;
-  top: $slideshow-height + 50;
-  left: $slideshow-width/2-20;
+  top: $slideshow-height+130;
+  left: $slideshow-width/2-5;
 }
 .slideshow-nav a {
   display:inline-block;
