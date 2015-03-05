@@ -27,29 +27,7 @@ function getProjects(){
   });
 }
 
-function getCurrentUserProjects(){
-  var userId = $('#user-projects').data('userid');
-  console.log(userId); 
-  request("GET","/projects", null).done(function(data){
-    $.each(data, function(index,project){
-      //the crucial bit, filtering out only the ones from current user
-      if (project.user_id === userId) {
-        addToPage(project)
-      }
-    });
-  });
-}
-
 $(document).ready(function(){
   console.log('Project.js loaded')
   getProjects()
-  getCurrentUserProjects()
-  //making the lightbulg glow
-  var rating = $('.average-rating').data('rating');
-  if (rating > 3){
-      $('.image').css('box-shadow', '0px 0px 5px yellow')
-      $('.image').css('background', 'yellow')
-      $('.image').css('border-radius', '40px')
-      // $('.brilliance').text('<p>BRILLIANT IDEA!</p>')
-  }
 });

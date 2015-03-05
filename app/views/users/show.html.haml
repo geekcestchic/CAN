@@ -1,12 +1,15 @@
-= image_tag @user.avatar.avatar_show.url
-%h1
-  = @user.firstname 
-  = @user.lastname
-%h2
-  = @user.location
-%p= @user.bio
+.user-header
+  = image_tag @user.avatar.avatar_show.url, class: 'image'
 
-= link_to 'Edit Profile', edit_user_registration_path(current_user)
+.user
+  %h1 My name is #{@user.firstname} #{@user.lastname}
+  = render 'users/stats'
+  = render 'follow_form' if user_signed_in?
+  %h2 I live in #{@user.location}
+  %p= @user.bio
+  = link_to 'Edit My Profile', edit_user_registration_path(current_user) 
 
-= render 'users/stats'
-= render 'follow_form' if user_signed_in?
+#user-projects{data:{userid:params[:id]}}
+
+.user-footer
+  =link_to(image_tag('lightbulb.svg', class:'image', title:'INSPIRED???'), new_project_path)

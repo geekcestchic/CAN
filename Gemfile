@@ -26,8 +26,6 @@ group :development, :test do
   gem 'byebug'
   gem 'pry-rails'
   gem 'pry-byebug'
-  # THE BEST FRICKEN GEM EVAR!!!!
-  gem 'xray-rails'
   gem 'web-console', '~> 2.0'
   gem 'spring'
   gem 'faker'
