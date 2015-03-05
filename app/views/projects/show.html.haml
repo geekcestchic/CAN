@@ -1,6 +1,6 @@
 .project-page
   %h1= @project.title
-  = image_tag 'lightbulb.svg',class: 'image'
+  = image_tag(@project.image.project_show.url), class: 'image'
   .brilliancs
   %p= @project.content
   .rating
