@@ -1,16 +1,11 @@
 <% provide(:title, @title) %>
 
-<div class="user_info">
-  <%= @user.avatar %>
-  <h1><%= @user.firstname %></h1>
-  <span><%= link_to "view my profile", @user %></span>
-</div>
 <div class="stats">
   <%= render 'users/stats' %>
   <% if @users.any? %>
     <div class="user_avatars">
       <% @users.each do |user| %>
-        <%= link_to (image_tag user.avatar), user %>
+        <%= link_to (image_tag user.avatar.avatar_show.url), user %>
       <% end %>
     </div>
   <% end %>

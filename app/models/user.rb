@@ -44,7 +44,7 @@ class User < ActiveRecord::Base
       user.provider = auth.provider
       user.uid = auth.uid
       user.firstname = auth.info.name
-      user.avatar = auth.info.image
+      user.remote_avatar_url = auth.info.image
       user.save
       user
     else
@@ -52,7 +52,7 @@ class User < ActiveRecord::Base
         user.provider = auth.provider
         user.uid = auth.uid
         user.firstname = auth.info.name
-        user.avatar = auth.info.image
+        user.remote_avatar_url = auth.info.image
         user.email = twitter_email
         user.password = Devise.friendly_token[0,20]
       end
