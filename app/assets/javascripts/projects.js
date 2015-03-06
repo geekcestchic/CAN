@@ -29,6 +29,17 @@ function addToUserPage(project){
   .appendTo("#user-projects")
 }
 
+// function addToCategoriesPage(project){
+//   var content = project.content
+//   // if(content.length > 100) content = content.substring(0,100) + '...'
+//   var title = project.title
+//   // if(title.length > 30) title = title.substring(0,30) + '...'
+//   $('<li class="project"><h2><a href="/projects/'
+//     + project.id +'">'+title+
+//     '</a></h2><p>'+content+'</p></li>')
+//   .appendTo(".categories-projects")
+// }
+
 function getProjects(){
   request("GET", "/projects", null).done(function(data){
     $.each(data, function(index,project){
@@ -50,10 +61,29 @@ function getCurrentUserProjects(){
   });
 }
 
+function getCategoriesProjects(){
+  // var categoryId = $('.categories-projects').data('categoryid');
+  // console.log(categoryId);
+  // // console.log(userId); 
+  // request("GET","/projects", null).done(function(data){
+  //   $.each(data, function(index,project){
+  //     var ids = [];
+  //     $.each(project.categories, function(index, category){
+  //       ids.push(category.id)
+  //     });
+
+  //     if ( $.inArray(categoryId,ids) !== -1) {
+  //       addToCategoriesPage(project)
+  //     }
+  //   });
+  // });
+}
+
 $(document).ready(function(){
   console.log('Project.js loaded')
   getProjects()
   getCurrentUserProjects()
+  getCategoriesProjects()
   //making the lightbulg glow
   var rating = $('.average-rating').data('rating');
   if (rating > 3){

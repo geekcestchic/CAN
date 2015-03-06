@@ -4,7 +4,8 @@
 .user
   %h1 My name is #{@user.firstname} #{@user.lastname}
   = render 'users/stats'
-  = render 'follow_form' if user_signed_in?
+  - if (user_signed_in? && current_user != User.find(params[:id]))
+    = render 'follow_form' 
   %h2 I live in #{@user.location}
   %p= @user.bio
   = link_to 'Edit My Profile', edit_user_registration_path(current_user) 
