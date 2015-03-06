@@ -1,10 +1,8 @@
 
 .slotdiv {
-  background-color:lightgrey;
   height: 500px;
   padding: 20px;
   text-align:center;
-  background:url('casino.jpg');
   background-size:100%;
 }
 
@@ -25,30 +23,34 @@ div#container {
 
 
 #newBtn {
-  background:white;
-  padding:5px;
+  background:black;
+  display:block;
+  color:white;
+  padding:5px 10px;
   border:none;
   font-size:15px;
-  margin:20px;
+  margin:20px auto;
 }
 #playBtn {
-  background:white;
-  padding:5px;
+  background:black;
+  display:block;
+  color:white;
+  padding:5px 10px;
   border:none;
   font-size:15px;
-  margin:20px;
+  margin:20px auto;
 }
 
 
 div.nav {
   width:150px;
   font-size: 15px;
-  margin: 20px;
+  margin: 35px;
   float: left;
   position:relative;
   list-style:none;
   font-weight: bold;
-  background:#7A2A7E;
+  // background:#7A2A7E;
   border-radius:3px;
   opacity:0.8;
 }
@@ -62,6 +64,7 @@ div.nav {
     height: 100px;
     background:white;
     border:none;
+    border-radius:3px;
     // background: rgb(2,5,2); /* Old browsers */
   // background: -moz-linear-gradient(top, rgba(2,5,2,1) 0%, rgba(255,255,255,1) 12%, rgba(255,255,255,1) 33%, rgba(255,255,255,1) 67%, rgba(255,252,252,1) 88%, rgba(0,0,0,1) 100%); /* FF3.6+ */
   // background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(2,5,2,1)), color-stop(12%,rgba(255,255,255,1)), color-stop(33%,rgba(255,255,255,1)), color-stop(67%,rgba(255,255,255,1)), color-stop(88%,rgba(255,252,252,1)), color-stop(100%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
@@ -98,16 +101,17 @@ input#form {
   height:35px;
   margin:10px;
   font-size: 15px;
-  padding:5px;
+  padding:0;
   text-align:center;
   border:none;
+  opacity:0;
 }
 
 p.slot {
   font-size: 15px;
   list-style:none;
   margin-bottom:10px;
-  color:white;
+  color:lightgrey;
   /*font-weight: bold;
   color: #FCC542;
   text-shadow: 3px 3px #ff0000;*/
