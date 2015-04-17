@@ -4,32 +4,32 @@ Website that allows for users to post their ideas, others to rate their ideas, a
 
 To launch the app, launch your terminal and copy "git clone git@github.com:howarda9/CAN.git", change to app directory, run bundle, rbenv rehash, rake db:create db:migrate db:seed, rails s, and open your browser at http://localhost:3000!
 
-Technicalities:
+Versions:
 
 * Ruby version: 2.1.4
 
 * Rails: 4.2.0
 
-* Gemfile/Tech used:
-gem 'simple_form'
-gem 'haml-rails'
-gem 'devise'
-gem 'cancancan'
-gem 'omniauth'
-gem 'omniauth-twitter'
-gem 'omniauth-facebook'
-gem 'rails_admin'
-gem 'carrierwave'
-gem 'carrierwave-video'
-gem 'rmagick', '~> 2.13.4'
-gem 'pg'
-gem 'sass-rails', '~> 5.0'
-gem 'uglifier', '>= 1.3.0'
-gem 'coffee-rails', '~> 4.1.0'
-gem 'jquery-rails'
-gem 'turbolinks'
-gem 'jbuilder', '~> 2.0'
-gem 'sdoc', '~> 0.4.0', group: :doc
-gem 'rails_12factor', group: :production
-gem 'thin'
-gem 'faker'
+Gems:
+* gem 'simple_form'
+* gem 'haml-rails'
+* gem 'devise'
+* gem 'cancancan'
+* gem 'omniauth'
+* gem 'omniauth-twitter'
+* gem 'omniauth-facebook'
+* gem 'rails_admin'
+* gem 'carrierwave'
+* gem 'carrierwave-video'
+* gem 'rmagick', '~> 2.13.4'
+* gem 'pg'
+* gem 'sass-rails', '~> 5.0'
+* gem 'uglifier', '>= 1.3.0'
+* gem 'coffee-rails', '~> 4.1.0'
+* gem 'jquery-rails'
+* gem 'turbolinks'
+* gem 'jbuilder', '~> 2.0'
+* gem 'sdoc', '~> 0.4.0', group: :doc
+* gem 'rails_12factor', group: :production
+* gem 'thin'
+* gem 'faker'
